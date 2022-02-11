@@ -1,0 +1,586 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Yeon+Sung&family=Yuji+Syuku&family=Murecho&display=swap');
+/* 폰트 */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+/* 폰트어썸 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-size: 10px;
+    font-family: 'Murecho', sans-serif;
+    /* outline: 1px solid maroon; */
+}
+body {
+    margin: 0 auto;
+    min-width: 1200px;
+    max-width: 1920px;
+}
+
+img,
+iframe {
+    display: block;
+}
+
+p {
+    font-size: inherit;
+}
+
+b {
+    font-size: inherit;
+}
+
+a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ol {
+    font-size: inherit;
+}
+
+ol li {
+    list-style-type: decimal;
+    font-size: inherit;
+}
+
+h3 {
+    font-size: 5rem;
+    padding-top: 70px;
+    text-align: center;
+}
+
+.kanji {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 1.8rem;
+}
+
+span {
+    font-size: inherit;
+}
+
+
+/* 헤더--------------------------------------------------------------------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 22;
+    box-shadow: 0 0 10px #01A0C7;
+}
+
+.headlogo > a {
+    display: flex;
+    align-items: flex-end;
+}
+
+.headlogo p {
+    font-size: 4rem;
+    color: #01A0C7;
+    margin-left: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #01A0C7;
+    font-size: 4rem;
+    width: 60vw;
+}
+
+header nav p {
+    font-family: 'Yuji Syuku', serif;
+    cursor: pointer;
+}
+
+.language {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.language a {
+    width: auto;
+    height: auto;
+}
+
+.language img {
+    width: 80px;
+    height: 80px;
+}
+
+.menu {
+    display: none;
+}
+
+/* 블록1--------------------------------------------------------------------------------------- */
+.block1 {
+    display: flex;
+    background: url(../img/hyogo/sectionback.png) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 50px;
+    color: white;
+}
+
+.block1 iframe {
+    margin-top: 50px;
+    width: 720px;
+    height: 405px;
+    border: none;
+}
+
+.title {
+    position: relative;
+}
+
+.title h1 {
+    font-size: 25rem;
+}
+
+/* 블록2--------------------------------------------------------------------------------------- */
+.block2 {
+    background: #fafafa;
+    padding-bottom: 70px;
+}
+
+#map {
+    width: 1080px;
+    height: 720px;
+    margin: 70px auto 0;
+}
+
+.markertags {
+    font-size: 1.4rem;
+    background-color: rgba(255,255,255,0.8);
+    padding: 3px;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 5px;
+    position: relative;
+    top: -30px;
+}
+
+/* 블록3--------------------------------------------------------------------------------------- */
+.block3 {
+    background: #E6FFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 0;
+}
+
+.filter > p {
+    width: 120px;
+    padding: 10px;
+    font-size: 2rem;
+    text-align: center;
+    background: #c4c4c4;
+    color: white;
+    cursor: pointer;
+}
+
+.filter > p.on {
+    background-color: #167E9F;
+}
+
+.kankouspot {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 5px;
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    overflow-y: auto;
+    box-shadow: inset 0 0 5px #01A0C7;
+}
+
+.kankouspot > div {
+    margin-right: 20px;
+    margin-bottom: 100px;
+    box-shadow: 10px 10px 0 rgba(2, 190, 216, 0.5);
+    cursor: pointer;
+}
+
+.kankouspot > div.off {
+    display: none;
+}
+
+#loadingbox {
+    background: url(../img/svg/loading.gif) no-repeat top;
+    width: 151px;
+    height: 151px;
+    box-shadow: none;
+    margin: 50px;
+}
+
+.kankouspot > div > p:first-child {
+    width: 330px;
+    height: 226px;
+}
+
+.kankouspot > div > p:last-child {
+    text-align: center;
+    font-size: 2rem;
+    background: white;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+}
+
+.img1 {background: url(../img/hyogo/nohukuji.jpg) no-repeat left / cover; background-position-y: top;}
+.img2 {background: url(../img/hyogo/minatogawa.jpg) no-repeat left / cover;}
+.img3 {background: url(../img/hyogo/zuihoji.jpg) no-repeat left / cover;}
+.img4 {background: url(../img/hyogo/arima-ropeway.jpg) no-repeat left / cover;}
+.img5 {background: url(../img/hyogo/nunobiki.jpg) no-repeat left / cover;}
+.img6 {background: url(../img/hyogo/akashi-bridge.JPG) no-repeat left / cover;}
+.img7 {background: url(../img/hyogo/rokko-cable.jpg) no-repeat left / cover;}
+.img8 {background: url(../img/hyogo/rokko-pasture.jpg) no-repeat left / cover;}
+.img9 {background: url(../img/hyogo/arima-onsen.JPG) no-repeat left / cover;}
+.img10 {background: url(../img/hyogo/yosyokuno-asahi.png) no-repeat left / cover;}
+.img11 {background: url(../img/hyogo/himeji-castle.jpg) no-repeat left / cover;}
+.img12 {background: url(../img/hyogo/kokoen.jpg) no-repeat left / cover;}
+.img13 {background: url(../img/hyogo/hikyu.png) no-repeat left / cover;}
+.img14 {background: url(../img/hyogo/S.B.DINER-KOBE.png) no-repeat left / cover;}
+.img15 {background: url(../img/hyogo/kobe-animal.jpg) no-repeat left / cover;}
+.img16 {background: url(../img/hyogo/rokko-garden.jpg) no-repeat left / cover;}
+.img17 {background: url(../img/hyogo/rokko-teras.jpg) no-repeat left / cover;}
+.img18 {background: url(../img/hyogo/Karapincha.png) no-repeat left / cover;}
+.img19 {background: url(../img/hyogo/ikuta-jinja.jpg) no-repeat left / cover;}
+.img20 {background: url(../img/hyogo/meriken-park.jpg) no-repeat left / cover;}
+.img21 {background: url(../img/hyogo/mayasan.jpg) no-repeat left / cover;}
+.img22 {background: url(../img/hyogo/Ca_marche.png) no-repeat left / cover;}
+.img23 {background: url(../img/hyogo/rosyoki.png) no-repeat left / cover;}
+.img24 {background: url(../img/hyogo/tantanmen.png) no-repeat left / cover;}
+
+.kankouspot > div > p:first-child::after {
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    color: white;
+    float: right;
+}
+
+.bunka > p:first-child::after {content: "歴史·文化"; background: rgba(255,126,32,0.8);}
+.onsen > p:first-child::after {content: "温泉"; background: rgba(182,0,0,0.8);}
+.sizen > p:first-child::after {content: "自然"; background: rgba(52,202,0,0.8);}
+.kankou > p:first-child::after {content: "観光施設"; background: rgba(59,114,178,0.8);}
+.taiken > p:first-child::after {content: "体験·見学"; background: rgba(35,180,154,0.8);}
+.gurume > p:first-child::after {content: "グルメ"; background: rgba(87,114,255,0.8);}
+
+.kankoudetail {
+    display: none;
+}
+
+.kankoudetail.on {
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 33;
+}
+
+.overlay {
+    margin: 0 auto;
+    width: 800px;
+    max-height: 90vh;
+    background: white;
+    padding-bottom: 10px;
+    overflow-y: auto;
+    display: none;
+}
+
+.overlay.on {
+    display: block;
+}
+
+.overlay > p:first-child {
+    height: 450px;
+}
+
+.overlay > p:first-child > b {
+    float: right;
+    padding: 3px;
+    background: white;
+    opacity: 50%;
+}
+
+.overlay > p:first-child > b {
+    float: right;
+    padding: 3px;
+    background: white;
+    opacity: 50%;
+}
+
+h6 {
+    font-size: 2.8rem;
+}
+
+.overlay h6 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.overlay > p:nth-of-type(2) {
+    font-size: 1.6rem;
+    margin: 20px 84px;
+    text-align: justify;
+}
+
+.overlay > table {
+    margin: 30px 84px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 1.6rem;
+}
+
+th {
+    width: 120px;
+    text-align: left;
+}
+
+td { width: 511px; }
+
+table tr:first-child td{ font-family: 'Murecho', sans-serif; }
+
+/* 블록4--------------------------------------------------------------------------------------- */
+.block4 {
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kobestart {
+    width: 1000px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    background: url(../img/svg/lineH.svg) no-repeat;
+    background-size: 90%;
+    background-position: center center;
+}
+
+.block4 h4 {
+    margin-top: 30px;
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    background: #167E9F;
+    user-select: none;
+}
+
+li.schedule {
+    width: 150px;
+    height: 150px;
+    padding-top: 55px;
+    border: 5px solid #80DEEB;
+    border-radius: 50%;
+    margin: 100px 10px;
+    font-size: 1.8rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content > li:hover {
+    border: 5px solid #167E9F;
+}
+
+li.schedule b {
+    background-color: rgba(255,255,255,0.4);
+    padding: 3px;
+}
+
+.content > li:nth-child(1) {background: url(../img/svg/airplane.png) no-repeat; background-size: cover;}
+.content > li:nth-child(2) {background: url(../img/svg/bus.png) no-repeat; background-size: cover;}
+.content > li:nth-child(3) {background: url(../img/hyogo/rokko-pasture.jpg) no-repeat; background-size: cover;}
+.content > li:nth-child(4) {background: url(../img/hyogo/rokko-garden.jpg) no-repeat; background-size: cover;}
+.content > li:nth-child(5) {background: url(../img/hyogo/rokko-teras.jpg) no-repeat; background-size: cover;}
+.content > li:nth-child(6) {background: url(../img/hyogo/kokoen.jpg) no-repeat; background-size: cover;}
+.content > li:nth-child(7) {background: url(../img/hyogo/himeji-castle.jpg) no-repeat; background-size: cover;}
+.content > li:nth-child(8) {background: url(../img/hyogo/zuihoji.jpg) no-repeat; background-size: cover;}
+.content > li:nth-child(9) {background: url(../img/hyogo/arima-onsen.JPG) no-repeat; background-size: cover;}
+.content > li:nth-child(10) {background: url(../img/hyogo/arima-ropeway.jpg) no-repeat; background-size: cover;}
+.content > li:nth-child(11) {background: url(../img/hyogo/mayasan.jpg) no-repeat; background-size: cover;}
+.content > li:nth-child(12) {background: url(../img/hyogo/nunobiki.jpg) no-repeat; background-size: cover;}
+.content > li:nth-child(13) {background: url(../img/hyogo/nohukuji.jpg) no-repeat; background-size: cover;}
+.content > li:nth-child(14) {background: url(../img/hyogo/meriken-park.jpg) no-repeat; background-size: cover;}
+.content > li:nth-child(15) {background: url(../img/hyogo/ikuta-jinja.jpg) no-repeat; background-size: cover; background-position: center 0;}
+
+.info {
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #80DEEB;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.info:hover {
+    color: #167E9F;
+}
+
+ol.access {
+    background: url(../img/hyogo/schedule.png) no-repeat;
+    position: absolute;
+    width: 300px;
+    height: 154px;
+    top: -100%;
+    left: -57.5%;
+    font-size: 1.4rem;
+    z-index: 1;
+    padding: 10px 10px 0 30px;
+    display: none;
+}
+
+.content > li:nth-child(5) ol.access,
+.content > li:nth-child(10) ol.access,
+.content > li:nth-child(15) ol.access {
+    background: url(../img/hyogo/scheduleR.png) no-repeat;
+    left: -150%;
+}
+.content > li:nth-child(6) ol.access,
+.content > li:nth-child(11) ol.access {
+    background: url(../img/hyogo/scheduleL.png) no-repeat;
+    left: 40%;
+}
+
+.access.on {
+    display: block;
+}
+
+.flag {
+    width: 100px;
+    height: 100px;
+    border-left: 1px solid #1FB0DE;
+    position: absolute;
+}
+
+.flag > h6 {
+    background: #1FB0DE;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.flag1 {left: 85px;}
+.flag2 {left: 500px; top: 350px;}
+.flag3 {left: 295px; top: 700px;}
+
+.swiperbutton {
+    display: none;
+}
+
+/* 블록5--------------------------------------------------------------------------------------- */
+.block5 {
+    background: #E6FFFF;
+}
+
+.block5 > div {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.chain {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chain p:first-child {
+    width: 200px;
+    height: 99px;
+    box-shadow: 0 0 5px rgba(2, 190, 216, 0.5);
+    margin-top: 50px;
+}
+
+.chain p:last-child {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.logo1 {background: url(../img/logo/jnto.png) no-repeat;}
+.logo2 {background: url(../img/logo/hyogo-kankou.png) no-repeat;}
+.logo3 {background: url(../img/logo/feelkobe.png) no-repeat;}
+.logo4 {background: url(../img/logo/arima.png) no-repeat;}
+.logo5 {background: url(../img/logo/kixairport.png) no-repeat;}
+.logo6 {background: url(../img/logo/himeji.png) no-repeat;}
+.logo7 {background: url(../img/logo/rokko.png) no-repeat;}
+.logo8 {background: url(../img/logo/tabelog.png) no-repeat;}
+
+/* 바닥--------------------------------------------------------------------------------------- */
+footer {
+    height: 40px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (max-width: 1500px) {
+    header nav {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 1350px) {
+    header nav {
+        font-size: 3rem;
+    }
+}

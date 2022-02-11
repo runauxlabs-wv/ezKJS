@@ -1,0 +1,369 @@
+
+body {
+    width: 100%;
+    min-width: 768px;
+    max-width: 1199px;
+}
+
+.inner {
+    width: auto;
+    padding: 0 10px;
+}
+
+/* 헤더 ------------------------------------------------------------------------------*/
+.login {
+    display: none;
+}
+
+.gnb {
+    padding: 20px 10px;
+    border: none;
+}
+
+.gnb > .inner {
+    justify-content: space-between;
+}
+
+.gnb > .inner > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu, .menuclose {
+    display: block;
+    width: 40px;
+}
+
+.is-ie .menu{
+    height: 40px;
+    position: absolute;
+    top: 20%;
+}
+
+.reactmenu {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+.reactmenu a:nth-child(1) img {width: 45px; padding-top: 5px;}
+.reactmenu a:nth-child(2) img {width: 40px;}
+.reactmenu a:nth-child(3) img {width: 38px;}
+
+.is-ie .reactmenu a:nth-child(1) img {height: 45px;}
+.is-ie .reactmenu a:nth-child(2) img {height: 40px;}
+.is-ie .reactmenu a:nth-child(3) img {height: 38px;}
+
+.nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -384px;
+    background: #f9f9f9;
+    width: 384px;
+    height: 100vh;
+    padding-top: 80px;
+    overflow-y: auto;
+    transform: translateX(0);
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.nav.on {
+    transform: translateX(100%);
+}
+
+.nav > li {
+    z-index: 0;
+    height: auto;
+}
+
+.nav > li > a {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background: #146DFA;
+    color: white;
+    border-bottom: 1px dashed white;
+}
+
+.snb {
+    width: 100%;
+    position: unset;
+    padding: 0 0 20px 0;
+    border-top: none;
+    z-index: 0;
+}
+
+.is-ie .snb {
+    position: static;
+}
+
+.snb > div {
+    width: auto;
+    height: auto;
+    border: none;
+}
+
+.snb p, .snb li {
+    padding-left: 0;
+}
+
+.snb p {
+    padding: 20px 0 0 40px;
+}
+
+.snb li {
+    margin-top: 0;
+}
+
+.snb li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0 10px 50px;
+}
+
+.menuclose {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.gnbsns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    font-size: 1.5rem;
+}
+
+.gnbsns div {
+    display: flex;
+    margin-top: 10px;
+}
+
+.gnbsns a {
+    display: block;
+    text-align: center;
+    margin: 5px;
+}
+
+.gnbsns img {
+    width: 50px;
+    height: 50px;
+}
+
+/* 섹션1 ------------------------------------------------------------------------------*/
+.swiper-button-next, .swiper-button-prev {
+    margin: 0 20px;
+}
+
+.searchbox {
+    width: 100%;
+    transform: translate(-50%, -59px);
+}
+
+.ticket li {
+    width: 150px;
+    font-size: 2rem;
+}
+
+.mainfrm {
+    padding: 10px 30px;
+    box-shadow: 0 15px 24px rgba(0,0,0,0.3);
+}
+
+.tripInfomation {
+    width: 90vw;
+    flex-wrap: wrap;
+}
+
+.tripInfomation::after {
+    top: 45%;
+}
+
+.tripInfomation > div {
+    height: 120px;
+}
+
+.tripInfomation p, .tripInfomation select {
+    height: 50px;
+}
+
+.tripInfoTicket p {
+    width: 42vw;
+}
+
+.tripInfoPoint p {
+    width: 42vw;
+}
+
+.dateTime {
+    width: 90vw;
+}
+
+.is-ie .dateTime input {
+    width: 35%;
+}
+
+@media (min-width:960px) {
+    .tripInfoNumber .dateTime {
+        height: auto;
+    }
+
+    .dateTime span br {
+        display: none;
+    }
+
+    .roundtrip::after {
+        background: none;
+    }
+}
+
+.tripInfomation .tripInfoNumber {
+    margin-top: 20px;
+    height: auto;
+}
+
+.tripInfoNumber > div {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.tripInfoNumber > div > p:first-child {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.searchbtn {
+    width: 20%;
+    line-height: 50px;
+}
+
+.subfrm {
+    width: 95vw;
+    top: 470px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.peopleOption {
+    justify-content: center;
+}
+
+/* 섹션2 ------------------------------------------------------------------------------*/
+
+.section2 {
+    margin-top: 400px;
+}
+
+.block1 {
+    flex-direction: column;
+    align-items: center;
+}
+
+.notice {
+    width: 650px;
+}
+
+.block2 {
+    flex-direction: column;
+}
+
+.sns {
+    display: none;
+}
+
+.smallbanner {
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.smallbanner img {
+    width: 30vw;
+}
+
+.help ul {
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.block3 img {
+    width: 45vw;
+    max-width: 500px;
+}
+
+.block2, .block3 {
+    margin-top: 30px;
+}
+
+.block2 h2, .block3 h2 {
+    text-align: center;
+}
+
+
+/* footer ------------------------------------------------------------------------------*/
+footer {
+    margin-top: 30px;
+}
+
+.familysite {
+    border-bottom: 1px solid #d4d4d4;
+    padding: 10px 0;
+}
+
+.familysite > .inner > div {
+    flex-wrap: wrap;
+}
+
+.familysite > .inner > div:first-child {
+    width: 75%;
+}
+
+.familysite > .inner > div:last-child {
+    width: 25%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.familysite a {
+    font-size: 1.1rem;
+    padding: 2px 5px;
+}
+
+.familysite select {
+    padding: 4px 0;
+}
+
+#siteGo {
+    padding: 6.5px 10px;
+}
+
+.korailInfo img {
+    display: none;
+}
+
+.korailInfo > div {
+    width: 100%;
+}
+
+.korailInfo > div > div {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.korailInfo > div p {
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.copyright {
+    text-align: center;
+}

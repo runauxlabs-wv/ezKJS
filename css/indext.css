@@ -1,0 +1,77 @@
+body {
+    min-width: 768px;
+    max-width: 1199px;
+}
+
+.inner {
+    width: 100%;
+}
+
+div.span {
+    display: block;
+}
+
+div.span p {
+    font-size: 10vw;
+    text-align: left;
+}
+
+/* about-------------------------------------------------------------------- */
+
+.me li, .about p {
+    font-size: 3vw;
+}
+
+.me li:last-child {
+    padding-left: 17vw;
+}
+/* works-------------------------------------------------------------------- */
+
+.swiper {
+    width: 100vw;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.swiper-slide {
+    width: 100vw;
+    flex-direction: column;
+}
+
+.imgbox {
+    width: 70vw;
+    height: 39.375vw;
+}
+
+.textbox {
+    width: 70vw;
+}
+
+/* contact-------------------------------------------------------------------- */
+
+form {
+    width: 100vw;
+    z-index: 1;
+}
+
+form > div:first-child {
+    justify-content: space-around;
+}
+
+form input[type=text] {
+    width: 30vw;
+    font-size: 2.5vw;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+textarea {
+    width: 97vw;
+    font-size: 2.5vw;
+    margin: 0 auto;
+    resize: none;
+}
+
+.submitbtn {
+    font-size: 2.5vw;
+}

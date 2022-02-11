@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>효고여행</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="css/hyogo.css">
+    <link rel="stylesheet" type="text/css" media="all and (max-width:1199px)" href="css/hyogot.css">
+    <link rel="stylesheet" type="text/css" media="all and (max-width:767px)" href="css/hyogom.css">
+</head>
+
+<body>
+    <header>
+        <div class="headlogo">
+            <a href="#">
+                <img src="img/hyogo/hyogo_kenki.png" alt="로고" title="로고">
+                <span class="kanji">兵庫県</span>
+            </a>
+        </div>
+        <nav>
+            <p data-id="remote1">관광지도</p>
+            <p data-id="remote2">추천관광지</p>
+            <p data-id="remote3">추천코스</p>
+            <p data-id="remote4">관련사이트</p>
+        </nav>
+        <div class="language">
+            <a href="index.html"><img src="img/svg/homeH.svg" alt="첫화면으로"></a>
+            <a href="hyogo-jp.html"><img src="img/svg/languageH.svg" alt="日本語"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a data-id="remote1"></a></li>
+                <li><a data-id="remote2"></a></li>
+                <li><a data-id="remote3"></a></li>
+                <li><a data-id="remote4"></a></li>
+                <li><a href="index.html"></a></li>
+                <li><a href="hyogo-jp.html"></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="section">
+        <div class="block1">
+            <iframe src="https://www.youtube-nocookie.com/embed/DGRPS7Z4z6w" title="효고관광본부 공식유튜브" allowfullscreen></iframe>
+            <div class="title">
+                <h1 class="kanji">兵庫県</h1>
+                <h2>효고현</h2>
+            </div>
+        </div>
+        <div class="block2" id="remote1">
+            <h3>관광지도</h3>
+            <div id="map"></div>
+        </div>
+        <div class="block3" id="remote2">
+            <h3>추천관광지</h3>
+            <div class="filter">
+                <p id="allselect" class="on">전체보기</p>
+                <p id="bunka">역사·문화</p>
+                <p id="onsen">온천</p>
+                <p id="taiken">체험·견학</p>
+                <p id="sizen">자연</p>
+                <p id="kankou">관광시설</p>
+                <p id="gurume">맛집</p>
+            </div>
+            <div class="kankouspot">
+                <p id="loadingbox"></p>
+            </div>
+            <div class="kankoudetail">
+            </div>
+        </div>
+        <div class="block4" id="remote3">
+            <h3>추천코스</h3>
+            <h4>고베시</h4>
+            <div class="kobestart swiper mySwiper">
+                <ul class="content swiper-wrapper">
+                    <li class="schedule swiper-slide"><b>간사이국제공항</b></li>
+                    <li class="schedule swiper-slide"><b>고베 산노미야</b>
+                        <ol class="access">
+                            <li>간사이국제공항에서 산노미야행 버스 탑승</li>
+                            <li>산노미야에서 하차</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>고베 롯코산목장</b><i class="fas fa-info-circle info" data-id="rokkopasture"></i>
+                        <ol class="access">
+                            <li>JR 산노미야역에서 JR 롯코미치역으로 이동</li>
+                            <li>16번 버스 탑승 후 케이블시타역에서 하차</li>
+                            <li>케이블카를 이용해 롯코산죠역으로 이동</li>
+                            <li>마야스카이셔틀버스 탑승 후 롯코산목장에서 하차</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>롯코산 식물원</b><i class="fas fa-info-circle info" data-id="rokkogarden"></i>
+                        <ol class="access">
+                            <li>롯코산목장에서 롯코산죠행 버스 탑승</li>
+                            <li>기념비대<span>(記念碑台)</span>에서 하차</li>
+                            <li>로프웨이행 버스 탑승</li>
+                            <li>오르골뮤지엄에서 하차 후 도보 약 5분</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>롯코 가든테라스</b><i class="fas fa-info-circle info" data-id="rokkoteras"></i>
+                        <ol class="access">
+                            <li>오르골뮤지엄에서 버스 탑승</li>
+                            <li>롯코 가든테라스에서 하차</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>코코엔</b><i class="fas fa-info-circle info" data-id="kokoen"></i>
+                        <ol class="access">
+                            <li>히메지성 정문으로 나온 뒤 우측으로 이동</li>
+                            <li>또는 성곽을 따라 반시계방향으로 이동</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>히메지성</b><i class="fas fa-info-circle info" data-id="himejicastle"></i>
+                        <ol class="access">
+                            <li>아리마구치역에서 신카이치행 열차로 환승</li>
+                            <li>타니가미역에서 하차 후 호쿠신선으로 환승</li>
+                            <li>신고베역에서 하차 후 신칸센 탑승</li>
+                            <li>히메지역에서 하차 후 성까지 도보이동</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>즈이호지 공원</b><i class="fas fa-info-circle info" data-id="zuihoji"></i>
+                        <ol class="access">
+                            <li>체크아웃 후 짐 보관</li>
+                            <li>즈이호지 공원까지 도보이동</li>
+                            <li>관광 후 아리마역에서 아리마구치역으로 이동</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>아리마 온천</b><i class="fas fa-info-circle info" data-id="arimaonsen"></i>
+                        <ol class="access">
+                            <li>로프웨이 탑승 아리마온천으로 이동</li>
+                            <li>체크인 및 휴식</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>아리마 로프웨이</b><i class="fas fa-info-circle info" data-id="arimaropeway"></i>
+                        <ol class="access">
+                            <li>가든테라스에서 로프웨이 탑승장까지 도보이동</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>고베 숙소 이동</b>
+                        <ol class="access">
+                            <li>히메지역으로 이동 후 신칸센 탑승</li>
+                            <li>신고베역에서 하차</li>
+                            <li>숙소 이동 및 체크인</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>누노비키 폭포</b><i class="fas fa-info-circle info" data-id="nunobiki"></i>
+                        <ol class="access">
+                            <li>신고베역 북쪽으로 진출 후 도보 약 10분</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>노후쿠지</b><i class="fas fa-info-circle info" data-id="nohukuji"></i>
+                        <ol class="access">
+                            <li>신고베역에서 시영전철탑승 산노미야역으로 이동</li>
+                            <li>JR선으로 환승 후 효고역으로 이동</li>
+                            <li>효고역 남쪽출구에서 도보 약 15분</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>메리켄파크</b><i class="fas fa-info-circle info" data-id="meriken"></i>
+                        <ol class="access">
+                            <li>노후쿠지에서 주오이치바마에역까지 도보이동</li>
+                            <li>지하철 탑승 후 미나토모토마치역에서 하차</li>
+                            <li>해양박물관 방향으로 도보 약 5분</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>이쿠타 신사</b><i class="fas fa-info-circle info" data-id="ikutajinja"></i>
+                        <ol class="access">
+                            <li>산노미야 방향으로 도보 약 15분</li>
+                            <li>관광 후 산노미야에서 공항행 버스 탑승</li>
+                            <li>간사이국제공항 제1터미널에서 하차</li>
+                        </ol>
+                    </li>
+                </ul>
+                <div class="swiper-button-next swiperbutton"></div>
+                <div class="swiper-button-prev swiperbutton"></div>
+                <div class="swiper-pagination"></div>
+                <div class="flag flag1">
+                    <h6>1일차</h6>
+                </div>
+                <div class="flag flag2">
+                    <h6>2일차</h6>
+                </div>
+                <div class="flag flag3">
+                    <h6>3일차</h6>
+                </div>
+            </div>
+        </div>
+        <div class="block5" id="remote4">
+            <h3>관련사이트</h3>
+            <div>
+                <div class="chain">
+                    <p class="logo1"><a href="https://www.japan.travel/ko/kr/" target="_blank"></a></p>
+                    <p>일본정부 관광국</p>
+                </div>
+                <div class="chain">
+                    <p class="logo2"><a href="https://www.travelhyogo.org.k.aas.hp.transer.com/" target="_blank"></a></p>
+                    <p>효고관광본부</p>
+                </div>
+                <div class="chain">
+                    <p class="logo3"><a href="https://www.feel-kobe.jp/ko/" target="_blank"></a></p>
+                    <p>고베 공식<br>관광사이트</p>
+                </div>
+                <div class="chain">
+                    <p class="logo4"><a href="https://visit.arima-onsen.com/kr/" target="_blank"></a></p>
+                    <p>아리마온천<br>관광협회</p>
+                </div>
+                <div class="chain">
+                    <p class="logo5"><a href="https://www.kansai-airport.or.jp/kr/" target="_blank"></a></p>
+                    <p>간사이국제공항</p>
+                </div>
+                <div class="chain">
+                    <p class="logo6"><a href="https://www.himeji-kanko.jp.k.adl.hp.transer.com/" target="_blank"></a></p>
+                    <p>히메지관광 네비</p>
+                </div>
+                <div class="chain">
+                    <p class="logo7"><a href="https://www.rokkosan.com/ko/" target="_blank"></a></p>
+                    <p>롯코산</p>
+                </div>
+                <div class="chain">
+                    <p class="logo8"><a href="https://tabelog.com/kr/" target="_blank"></a></p>
+                    <p>타베로그</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>COPYRIGHT © HYOGO TOUR ALL RIGHT RESERVED.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwKEbuaOVo4-wBsosgzS99XmpKp4j7N1w&callback=initMap&region=kr" async></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+    <script src="js/hyogo-kr.js"></script>
+    <script src="js/hyogo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>岐阜旅</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="css/gifu-jp.css">
+    <link rel="stylesheet" type="text/css" media="all and (max-width:1199px)" href="css/gifut-jp.css">
+    <link rel="stylesheet" type="text/css" media="all and (max-width:767px)" href="css/gifum-jp.css">
+</head>
+
+<body>
+    <header>
+        <div class="headlogo">
+            <a href="#">
+                <img src="img/gifu/gifu_logo.png" alt="ロゴ" title="ロゴ">
+                <p class="kanji">岐阜県</p>
+            </a>
+        </div>
+        <nav>
+            <p data-id="remote1">観光地図</p>
+            <p data-id="remote2">観光スポット</p>
+            <p data-id="remote3">モデルコース</p>
+            <p data-id="remote4">関連サイト</p>
+        </nav>
+        <div class="language">
+            <a href="index.html"><img src="img/svg/homeG.svg" alt="最初画面へ"></a>
+            <a href="gifu.html"><img src="img/svg/languageG.svg" alt="한국어"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a data-id="remote1"></a></li>
+                <li><a data-id="remote2"></a></li>
+                <li><a data-id="remote3"></a></li>
+                <li><a data-id="remote4"></a></li>
+                <li><a href="index.html"></a></li>
+                <li><a href="gifu.html"></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="section">
+        <div class="block1">
+            <iframe src="https://www.youtube.com/embed/xBgJbmp7klw" title="岐阜観光連盟公式YOUTUBE" allowfullscreen></iframe>
+            <div class="title">
+                <h1 class="kanji">岐阜県</h1>
+            </div>
+        </div>
+        <div class="block2" id="remote1">
+            <h3>観光地図</h3>
+            <div id="map"></div>
+        </div>
+        <div class="block3" id="remote2">
+            <h3>観光スポット</h3>
+            <div class="filter">
+                <p id="allselect" class="on">全て</p>
+                <p id="bunka">歴史·文化</p>
+                <p id="onsen">温泉</p>
+                <p id="taiken">体験·見学</p>
+                <p id="sizen">自然</p>
+                <p id="kankou">観光施設</p>
+                <p id="gurume">グルメ</p>
+            </div>
+            <div class="kankouspot">
+                <p id="loadingbox"></p>
+            </div>
+            <div class="kankoudetail">
+            </div>
+        </div>
+        <div class="block4" id="remote3">
+            <h3>モデルコース</h3>
+            <nav>
+                <h5 class="switch on">岐阜市</h5>
+                <h5 class="switch">高山市</h5>
+            </nav>
+            <div class="gifustart swiper mySwiper on">
+                <ul class="content swiper-wrapper">
+                    <li class="schedule swiper-slide"><b>中部国際空港</b></li>
+                    <li class="schedule swiper-slide"><b>信長ゆめ広場</b><i class="fas fa-info-circle info" data-id="nobunaga"></i>
+                        <ol class="access">
+                            <li>中部国際空港で名鉄特急に乗る</li>
+                            <li>名鉄岐阜駅で下車後徒歩移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>正法寺</b><i class="fas fa-info-circle info" data-id="sohoji"></i>
+                        <ol class="access">
+                            <li>岐阜駅のバス乗り場へ移動</li>
+                            <li>4番乗り場で塩後行きのバスに乗る</li>
+                            <li>本町1丁目で下車</li>
+                            <li>徒歩移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>ロープウェー</b><i class="fas fa-info-circle info" data-id="kinkajanropeway"></i>
+                        <ol class="access">
+                            <li>正法寺より岐阜公園まで徒歩移動</li>
+                            <li>岐阜公園内のロープウェイ乗り場へ移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>金華山リス村</b><i class="fas fa-info-circle info" data-id="kinkajanrisu"></i>
+                        <ol class="access">
+                            <li>金華山ロープウェーに乗る</li>
+                            <li>頂上で下車後すぐ前</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>下呂温泉合掌村</b><i class="fas fa-info-circle info" data-id="gassyo"></i>
+                        <ol class="access">
+                            <li>足湯を楽しんだ後、合掌村へ移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>足湯体験</b>
+                        <ol class="access">
+                            <li>宿へ移動後、チェックイン</li>
+                            <li>様々な足湯を体験する</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>下呂温泉</b><i class="fas fa-info-circle info" data-id="gero"></i>
+                        <ol class="access">
+                            <li>JR岐阜駅へ移動</li>
+                            <li>「特急ワイドビューひだ」に乗る</li>
+                            <li>JR下呂駅で下車</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>伊奈波神社</b><i class="fas fa-info-circle info" data-id="inaba"></i>
+                        <ol class="access">
+                            <li>チェックアウト後周りのバス停に移動</li>
+                            <li>バスに乗る</li>
+                            <li>伊奈波通りで下車</li>
+                            <li>伊奈波神社まで徒歩移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>岐阜城</b><i class="fas fa-info-circle info" data-id="gifucastle"></i>
+                        <ol class="access">
+                            <li>金華山リス村より岐阜城まで徒歩移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>温泉入浴</b>
+                        <ol class="access">
+                            <li>「湯めぐり手形」を使って温泉を楽しむ</li>
+                            <li>自分の旅館の温泉も忘れずに！</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>一宮水無神社</b><i class="fas fa-info-circle info" data-id="ichinomiya"></i>
+                        <ol class="access">
+                            <li>JR下呂駅へ移動</li>
+                            <li>高山行きの電車に乗る</li>
+                            <li>飛騨一ノ宮駅で下車</li>
+                            <li>神社まで徒歩移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>バスセンター</b>
+                        <ol class="access">
+                            <li>飛騨一ノ宮駅で高山行きの電車に乗る</li>
+                            <li>高山駅で下車</li>
+                            <li>東口の飛騨バスセンターへ移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>白川郷</b><i class="fas fa-info-circle info" data-id="shirakawago"></i>
+                        <ol class="access">
+                            <li>飛騨バスセンターで白川郷行きのバスに乗る</li>
+                            <li>着いてから合掌村と展望台を見回る</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>バスセンター</b>
+                        <ol class="access">
+                            <li>白川郷バスセンターで名古屋行きのバスに乗る</li>
+                            <li>その後、名鉄名古屋駅へ移動</li>
+                            <li>中部国際空港へ移動</li>
+                        </ol>
+                    </li>
+                </ul>
+                <div class="swiper-button-next swiperbutton"></div>
+                <div class="swiper-button-prev swiperbutton"></div>
+                <div class="swiper-pagination"></div>
+                <div class="flag flag1">
+                    <h6>1日目</h6>
+                </div>
+                <div class="flag flag2">
+                    <h6>2日目</h6>
+                </div>
+                <div class="flag flag3">
+                    <h6>3日目</h6>
+                </div>
+            </div>
+            <div class="takayamastart swiper mySwiper">
+                <ul class="content swiper-wrapper">
+                    <li class="schedule swiper-slide"><b>中部国際空港</b></li>
+                    <li class="schedule swiper-slide"><b>一宮水無神社</b><i class="fas fa-info-circle info" data-id="ichinomiya"></i>
+                        <ol class="access">
+                            <li>中部国際空港で名鉄線に乗る</li>
+                            <li>名古屋駅で下車後JR名古屋駅へ移動</li>
+                            <li>「特急ワイド飛騨」に乗る</li>
+                            <li>飛騨萩原駅で普通電車に乗り換える</li>
+                            <li>飛騨一ノ宮駅で下車後徒歩移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>古い町並</b><i class="fas fa-info-circle info" data-id="hurui"></i>
+                        <ol class="access">
+                            <li>飛騨一ノ宮駅で高山行きの電車に乗る</li>
+                            <li>高山駅で下車後徒歩移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>飛騨の里</b><i class="fas fa-info-circle info" data-id="hidanosato"></i>
+                        <ol class="access">
+                            <li>高山駅へ移動</li>
+                            <li>濃飛バスセンターでさるぼぼバスに乗る</li>
+                            <li>飛騨の里で下車</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>飛騨東照宮</b><i class="fas fa-info-circle info" data-id="douzoku"></i>
+                        <ol class="access">
+                            <li>飛騨の里でさるぼぼバスに乗る</li>
+                            <li>飛騨東照宮下で下車</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>下呂温泉合掌村</b><i class="fas fa-info-circle info" data-id="gassyo"></i>
+                        <ol class="access">
+                            <li>足湯を楽しんだ後、合掌村へ移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>足湯体験</b>
+                        <ol class="access">
+                            <li>宿へ移動後、チェックイン</li>
+                            <li>様々な足湯を体験する</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>下呂温泉</b><i class="fas fa-info-circle info" data-id="gero"></i>
+                        <ol class="access">
+                            <li>JR高山駅へ移動</li>
+                            <li>「特急ワイドビューひだ」に乗る</li>
+                            <li>JR下呂駅で下車</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>高山陣屋</b><i class="fas fa-info-circle info" data-id="takayamajinya"></i>
+                        <ol class="access">
+                            <li>チェックアウト後徒歩移動</li>
+                            <li>朝7時から昼まで高山陣屋前朝市も楽しめる</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>宿へ移動</b>
+                        <ol class="access">
+                            <li>さるぼぼバスに乗り、高山駅へ移動</li>
+                            <li>宿へ移動及び休憩</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>温泉入浴</b>
+                        <ol class="access">
+                            <li>「湯めぐり手形」を使って温泉を楽しむ</li>
+                            <li>自分の旅館の温泉も忘れずに！</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>岐阜城</b><i class="fas fa-info-circle info" data-id="gifucastle"></i>
+                        <ol class="access">
+                            <li>下呂駅で「特急ワイドビューひだ」に乗る</li>
+                            <li>12番乗り場で山県行きのバスに乗る</li>
+                            <li>岐阜公園で下車後ロープウェイに乗る</li>
+                            <li>頂上で岐阜城まで徒歩移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>金華山リス村</b><i class="fas fa-info-circle info" data-id=""></i>
+                        <ol class="access">
+                            <li>金華山ロープウェイへ移動</li>
+                            <li>ロープウェイのすぐ前</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>正法寺</b><i class="fas fa-info-circle info" data-id="kinkajanrisu"></i>
+                        <ol class="access">
+                            <li>ロープウェイで岐阜公園へ移動</li>
+                            <li>岐阜公園より正法寺まで徒歩移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>信長ゆめ広場</b><i class="fas fa-info-circle info" data-id="nobunaga"></i>
+                        <ol class="access">
+                            <li>岐阜駅まで移動して観光する</li>
+                            <li>名鉄岐阜駅で名鉄特急に乗る</li>
+                            <li>中部国際空港で下車</li>
+                        </ol>
+                    </li>
+                </ul>
+                <div class="swiper-button-next swiperbutton"></div>
+                <div class="swiper-button-prev swiperbutton"></div>
+                <div class="swiper-pagination"></div>
+                <div class="flag flag1">
+                    <h6>1日目</h6>
+                </div>
+                <div class="flag flag2">
+                    <h6>2日目</h6>
+                </div>
+                <div class="flag flag3">
+                    <h6>3日目</h6>
+                </div>
+            </div>
+        </div>
+        <div class="block5" id="remote4">
+            <h3>関連サイト</h3>
+            <div>
+                <div class="chain">
+                    <p class="logo1"><a href="https://www.japan.travel/jp/" target="_blank"></a></p>
+                    <p>日本政府観光局</p>
+                </div>
+                <div class="chain">
+                    <p class="logo2"><a href="https://www.kankou-gifu.jp/" target="_blank"></a></p>
+                    <p>岐阜観光連盟</p>
+                </div>
+                <div class="chain">
+                    <p class="logo3"><a href="https://www.hidatakayama.or.jp/" target="_blank"></a></p>
+                    <p>飛騨高山<br>観光協会</p>
+                </div>
+                <div class="chain">
+                    <p class="logo4"><a href="http://www.gero-spa.or.jp/" target="_blank"></a></p>
+                    <p>下呂温泉<br>旅館協同総合</p>
+                </div>
+                <div class="chain">
+                    <p class="logo5"><a href="https://www.centrair.jp/" target="_blank"></a></p>
+                    <p>中部国際空港</p>
+                </div>
+                <div class="chain">
+                    <p class="logo6"><a href="https://aquatotto.com/" target="_blank"></a></p>
+                    <p>世界淡水魚水族館<br>アクア·トト</p>
+                </div>
+                <div class="chain">
+                    <p class="logo7"><a href="https://shirakawa-go.gr.jp/" target="_blank"></a></p>
+                    <p>白川郷</p>
+                </div>
+                <div class="chain">
+                    <p class="logo8"><a href="https://tabelog.com/" target="_blank"></a></p>
+                    <p>食べログ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>COPYRIGHT © GIFU TOUR ALL RIGHT RESERVED.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwKEbuaOVo4-wBsosgzS99XmpKp4j7N1w&callback=initMap&region=kr" async></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+    <script src="js/gifu-jp.js"></script>
+    <script src="js/gifu.js"></script>
+</body>
+
+</html>

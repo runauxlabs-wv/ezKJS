@@ -1,0 +1,251 @@
+* {
+    font-size: 7px;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    min-width: 768px;
+    max-width: 1200px;
+}
+
+h3 {
+    padding-top: 30px;
+}
+
+/* 헤더--------------------------------------------------------------------------------------- */
+header {
+    padding: 0 20px;
+    height: 70px;
+}
+
+.headlogo img {
+    width: 50px;
+    height: 50px;
+    margin-left: 0;
+}
+
+.headlogo > a {
+    align-items: center;
+}
+
+.headlogo p {
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+header nav {
+    align-items: center;
+}
+
+header nav {
+    align-items: center;
+}
+
+.language {
+    width: 130px;
+}
+
+.language img {
+    width: 65px;
+    height: 65px;
+}
+
+/* 블록1--------------------------------------------------------------------------------------- */
+.block1 {
+    background-attachment: scroll;
+    padding-right: 20px;
+}
+
+.block1 iframe {
+    margin-top: 30px;
+    width: 400px;
+    height: 225px;
+}
+
+
+/* 블록2--------------------------------------------------------------------------------------- */
+.block2 {
+    padding-bottom: 50px;
+}
+
+#map {
+    width: 90vw;
+    height: 60vw;
+    margin: 40px auto 0;
+}
+
+/* 블록3--------------------------------------------------------------------------------------- */
+
+.filter {
+    width: 700px;
+}
+
+.filter > p {
+    width: 80px;
+    font-size: 2rem;
+}
+
+.kankouspot {
+    padding-left: 20px;
+}
+
+.kankouspot > div {
+    margin-right: 20px;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 0 rgba(2, 190, 216, 0.5);
+}
+
+.kankouspot > div > p:first-child {
+    width: 210px;
+    height: 140px;
+}
+
+.kankouspot > div > p:last-child {
+    font-size: 2.2rem;
+    padding: 5px 0;
+    height: 55px;
+}
+
+.kankouspot > div > p:first-child::after {
+    font-size: 2.2rem;
+}
+
+.overlay {
+    width: 700px;
+}
+
+.overlay > p:first-child {
+    height: 394px;
+}
+
+.overlay > p:first-child > b {
+    float: right;
+    padding: 3px;
+    background: white;
+    opacity: 50%;
+}
+
+.overlay > p:nth-of-type(2), th, td {
+    font-size: 2.2rem;
+}
+
+th {
+    width: 25vw;
+}
+
+td {
+    width: 75vw;
+}
+
+/* 블록4--------------------------------------------------------------------------------------- */
+
+.block4 nav {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+h5 {
+    width: 150px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 3rem;
+}
+
+
+.swiper {
+    width: 750px;
+}
+
+.content {
+    background-size: 88%;
+}
+
+li.schedule {
+    width: 100px;
+    height: 100px;
+    padding-top: 38px;
+    border: 3px solid #A8E7AF;
+    margin: 80px 20px;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+li.schedule:hover {
+    border: 3px solid #00880F;
+}
+
+li.schedule b {
+    background-color: rgba(255,255,255,0.4);
+    padding: 3px;
+}
+
+.info {
+    margin-top: 5px;
+    font-size: 3rem;
+}
+
+ol.access {
+    width: 250px;
+    height: 130px;
+    background-size: contain;
+    top: -120px;
+    left: -77.5px;
+    font-size: 1.7rem;
+    padding: 10px 10px 0 20px;
+}
+
+.content > li:nth-child(5) ol.access,
+.content > li:nth-child(10) ol.access,
+.content > li:nth-child(15) ol.access {
+    width: 250px;
+    background-size: contain;
+    left: -200px;
+}
+.content > li:nth-child(6) ol.access,
+.content > li:nth-child(11) ol.access {
+    width: 250px;
+    background-size: contain;
+}
+
+.flag {
+    width: 75px;
+    height: 75px;
+}
+
+.flag > h6 {
+    height: 37.5px;
+    line-height: 37.5px;
+}
+
+.flag1 {left: 70px; top: 5px;}
+.flag2 {left: 375px; top: 265px;}
+.flag3 {left: 222.5px; top: 525px;}
+
+
+/* 블록5--------------------------------------------------------------------------------------- */
+.block5 {
+    padding-bottom: 30px;
+}
+
+.block5 > div {
+    width: 92vw;
+}
+
+.chain {
+    width: 25%;
+    min-width: 70px;
+    height: 25%;
+}
+
+.chain p:first-child {
+    width: 20vw;
+    height: 10vw;
+    background-size: cover;
+    margin-top: 30px;
+}
+
+.chain p:last-child {
+    font-size: 2rem;
+}

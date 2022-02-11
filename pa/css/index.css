@@ -1,0 +1,196 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&family=Yuji+Syuku&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Yeon Sung', cursive;
+    font-weight: normal;
+    white-space: nowrap;
+    color: white;
+    /* outline: 1px solid aqua; */
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    min-width: 1200px;
+    max-width: 1920px;
+    min-height: 100vh;
+    user-select: none;
+    position: relative;
+}
+
+section {
+    width: 50vw;
+    min-width: 600px;
+    max-width: 960px;
+    max-height: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 18vw;
+    min-width: 200px;
+    max-width: 350px;
+    opacity: 30%;
+    filter: drop-shadow(0 10px 0 black);
+}
+
+h2 {
+    font-size: 10rem;
+}
+
+p {
+    font-size: 5rem;
+}
+
+h3 {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 25rem;
+    color: inherit;
+}
+
+.hyogo {
+    background: url(../img/hyogo/mainbanner.png) no-repeat left / cover;
+}
+
+.gifu {
+    background: url(../img/gifu/mainbanner.png) no-repeat left / cover;
+}
+
+.hyogo .banner {
+    margin-left: 5%;
+}
+
+.hyogo img {
+    margin-bottom: 90px;
+}
+
+.ribbon {
+    writing-mode: vertical-rl;
+    text-align: center;
+    height: 100%;
+    color: white;
+    opacity: 0.3;
+    /* overflow: hidden; */
+}
+
+.gifu .ribbon {
+    writing-mode: vertical-lr;
+}
+
+.set {
+    display: flex;
+}
+
+.gifu .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 5%;
+}
+
+.gifu img {
+    margin-top: 90px;
+}
+
+.ribbon p {
+    width: 100px;
+    color: inherit;
+}
+
+h1 {
+    writing-mode: vertical-lr;
+    background: none;
+    visibility: hidden;
+}
+
+h1 a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 50vh;
+    color: inherit;
+    font-size: 5rem;
+    line-height: 100px;
+}
+
+.hyogo h1{
+    transform: translateX(100%);
+    color: #4D859B;
+}
+
+.gifu h1{
+    transform: translateX(-100%);
+    color: #618654;
+}
+
+
+.set.on .ribbon {
+    background: white;
+    opacity: 1;
+    z-index: 2;
+}
+
+.hyogo .set.on .ribbon {
+    color: #4D859B;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.gifu .set.on .ribbon {
+    color: #618654;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.set.on h1 {
+    visibility: visible;
+    width: 100px;
+    background: white;
+    transform: translateX(0);
+    transition: 0.5s;
+}
+
+.set.on h1 a:hover {
+    background-color: #eaeaea;
+}
+
+
+h1 a:nth-child(2) {
+    font-family: 'Yuji Syuku', serif;
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    h1 a {
+        font-size: 4rem;
+    }
+    
+    h2 {
+        font-size: 8rem;
+    }
+    
+    h3 {
+        font-size: 18rem;
+    }
+
+    p {
+        font-size: 4rem;
+    }
+}
+
+@-moz-document url-prefix() {
+    .ribbon {
+        width: 20vw;
+    }
+
+    h3 {
+        line-height: 20vw;
+    }
+}

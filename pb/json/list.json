@@ -1,0 +1,26 @@
+[
+    {
+        "department" : "교통빅데이터연구본부",
+        "name" : "김주영",
+        "rank" : "본부장",
+        "research" : "",
+        "tel" : "044-211-3167",
+        "email" : "jykim@koti.re.kr"
+    },
+    {
+        "department" : "교통빅데이터연구본부",
+        "name" : "강아라",
+        "rank" : "행정조원",
+        "research" : "",
+        "tel" : "044-211-3076",
+        "email" : "ark9339@koti.re.kr"
+    },
+    {
+        "department" : "국가교통DB센터",
+        "name" : "조종석",
+        "rank" : "센터장",
+        "research" : "교통조사, 교통계획, 교통수요분석",
+        "tel" : "044-211-3216",
+        "email" : "cscho@koti.re.kr"
+    }
+]

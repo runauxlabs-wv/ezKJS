@@ -1,0 +1,225 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 767px;
+}
+
+
+/* 헤더 ------------------------------------------------------------------------------*/
+
+.logo {
+    width: 180px;
+}
+
+.gnb {
+    padding: 10px;
+}
+
+.gnb > .inner {
+    justify-content: flex-start;
+}
+
+.nav {
+    left: -100vw;
+    width: 100vw;
+}
+
+.menu, .menuclose {
+    display: block;
+    width: 30px;
+}
+
+.reactmenu {
+    width: 165px;
+    position: absolute;
+    top: 10px;
+    left: -195px;
+    transform: translateX(0);
+    transition: 0.5s;
+    z-index: 1001;
+}
+
+.reactmenu.on {
+    transform: translateX(100vw);
+}
+
+/* 섹션1 ------------------------------------------------------------------------------*/
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    right: 10px;
+    bottom: 10px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    display: none;
+}
+
+.searchbox {
+    left: 0;
+    transform: translate(0,0);
+}
+
+.ticket li {
+    width: 25%;
+    font-size: 1.8rem;
+}
+
+.mainfrm {
+    padding: 20px 10px;
+}
+
+.tripInfomation {
+    width: 100%;
+}
+
+.tripInfomation::after {
+    top: 148px;
+}
+
+.tripInfomation p, .tripInfomation select, .tripInfomation input[type=text] {
+    font-size: 1.5rem;
+}
+
+.tripInfoNumber .dateTime {
+    height: auto;
+}
+
+.dateTime span br {
+    display: none;
+}
+
+.roundtrip::after {
+    background: none;
+}
+
+.dateTime {
+    flex-direction: column;
+}
+
+.dateTime span {
+    margin: 5px 0;
+}
+
+.dateTime input {
+    font-size: 1.5rem;
+    padding: 0 2px 0 5px;
+}
+
+.tripInfomation .searchbtn {
+    width: 40%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.stationList li, .popularStation li {
+    width: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.seatOption {
+    padding: 50px 10px 20px;
+}
+
+.seatOption select {
+    width: 25vw;
+    font-size: 1.3rem;
+}
+
+.seatOption select:nth-child(2) {
+    margin: 0 20px;
+}
+
+.peopleOption {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.peopleOption > div {
+    width: 100%;
+}
+
+.peopleOption h2, .peopleOption input[type=text], .peopleOption h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.peopleOption h2 {
+    width: auto;
+}
+
+.peopleOption p {
+    font-size: 1.3rem;
+}
+
+.peopleOption input[type=text] {
+    width: 200px;
+}
+
+.peopleOption span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.age {
+    border-right: none;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.age > div, .disabled > div {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* 섹션2 ------------------------------------------------------------------------------*/
+.section2 {
+    margin-top: 450px;
+}
+
+.notice {
+    width: 90vw;
+}
+
+.help ul {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.help ul li {
+    width: 20vw;
+}
+
+.block3 > div {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.block3 img {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10px;
+}
+
+/* footer ------------------------------------------------------------------------------*/
+.familysite > .inner{
+    flex-direction: column;
+}
+
+.familysite > .inner > div:first-child {
+    width: 100%;
+}
+
+.familysite > .inner > div:last-child {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.familysite select {
+    padding: 4px 20px;
+}
+

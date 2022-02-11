@@ -1,0 +1,756 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: 'Noto Sans KR', sans-serif;
+    /* outline: 1px solid aqua; */
+}
+
+body {
+    margin: 0 auto;
+    min-width: 1400px;
+    max-width: 1920px;
+}
+
+img {
+    display: block;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+    display: block;
+}
+
+span {
+    font: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+i {
+    font-size: inherit;
+}
+
+.inner {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.ogrcht.on {
+    color: #005BAB;
+    font-weight: bold;
+    background-color: #c9c8ff;
+}
+
+
+/* 섹션1----------------------------------------------------------------- */
+.section1{
+    position: relative;
+    width: 100%;
+    height: 810px;
+}
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.background > img{
+    position: absolute;
+    height: 100%;
+}
+
+.sec1top {
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.sec1top .inner {
+    padding-top: 30px;
+}
+
+.member {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    background: url(../img/logo.png) no-repeat center / contain;
+    width: 270px;
+    height: 51px;
+}
+
+.member div {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.member div a:nth-child(3) {
+    padding: 5px;
+    border: 1px solid white;
+}
+
+.menuicon {
+    display: none;
+    cursor: pointer;
+}
+
+.member div a {
+    margin-right: 20px;
+}
+
+.menu {
+    margin-top: 30px;
+}
+
+.gnb {
+    width: 100%;
+    display: flex;
+}
+
+.gnb > li {
+    flex: 1;
+    font-size: 2.6rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.gnb > li:hover {
+    text-decoration: underline;
+}
+
+.sec1top.on {
+    background: white;
+    border-bottom-color: #005BAB;
+}
+
+.sec1top.on .menuicon {
+    color: #005BAB;
+}
+
+.sec1top.on .inner .logo {
+    background: url(../img/logohover.png);
+}
+
+.sec1top.on .inner .member div a {
+    color: #005BAB;
+    border-color: #005BAB;
+}
+
+.sec1top.on .inner .gnb > li {
+    color: #005BAB;
+}
+
+.snb {
+    position: absolute;
+    top: 57px;
+    width: 100%;
+    background: white;
+    z-index: 33;
+    display: none;
+    border: 3px solid #005BAB;
+    border-top: none;
+}
+
+.snb.on {
+    display: block;
+}
+
+.snb > li {
+    font-size: 1.6rem;
+    color: black;
+    padding: 10px 0;
+}
+
+.snb > li:hover {
+    font-weight: bold;
+    color: #005BAB;
+    text-decoration: underline;
+}
+
+h1 {
+    float: left;
+    font-size: 3.6rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 150px;
+}
+
+h1 span {
+    font-size: 4.6rem;
+}
+
+.Swiper1 {
+    float: right;
+    width: 500px;
+    height: 350px;
+    margin-top: 235px;
+}
+
+.swiper-slide {
+    display: flex;
+    background: white;
+}
+
+.Swiper1 .swiper-slide > div {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.Swiper1 .swiper-slide > div a > p:nth-child(2) {
+    font-size: 1.8rem;
+    margin: 15px 0 8px;
+}
+
+.Swiper1 .swiper-slide > div a > p:last-child {
+    font-size: 1.4rem;
+    color: #535353;
+}
+
+/* 섹션2----------------------------------------------------------------- */
+.section2 .inner {
+    padding-top: 60px;
+    display: flex;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section2 .inner > div > div {
+    padding: 20px;
+}
+
+.Swiper2 {
+    width: 760px;
+    height: 460px;
+    position: relative;
+}
+
+.s01 {
+    background: url(../img/slide1.png) no-repeat center / cover;
+}
+
+.s02 {
+    background: url(../img/slide2.jpg) no-repeat center / cover;
+}
+
+.Swiper2 > .swiper-pagination {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 24px;
+    font-size: 1.6rem;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.box2 > div {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.news1 { background: url(../img/cardnews.png) no-repeat left / cover; }
+.news2 .img { background: url(../img/meeting.jpg) no-repeat left / cover; }
+.news3 .img { background: url(../img/semina.jpg) no-repeat center / cover; }
+
+.cardnews {
+    width: 240px;
+    height: 240px;
+    position: relative;
+}
+
+.box1 a, .box4 a,
+.cardnews a {
+    width: 100%;
+    height: 100%;
+}
+
+.cardnews::after {
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 1.6rem;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.news1::after {
+    content: "카드뉴스";
+    background: red;
+}
+
+.news2::after {
+    content: "연구원 행사";
+    background: #231F20;
+}
+
+.news3::after {
+    content: "세미나 현장";
+    background: #231F20;
+}
+
+.cardnews .img {
+    height: 80%;
+}
+
+.cardnews p {
+    font-size: 1.6rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cardnews p:last-child {
+    font-size: 1.3rem;
+    color: #535353;
+}
+
+.box3 > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.selectbox {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.selectbox > p {
+    padding: 10px 20px;
+    background: #E9E9E9;
+    color: #3E3E3E;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.selectbox > p:hover,
+.selectbox > p.on {
+    color: white;
+    background: #005BAB;
+}
+
+.plusview p {
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 3rem;
+    border: 1px solid #c4c4c4;
+    border-radius: 50%;
+    display: none;
+}
+
+.plusview p:hover {
+    color: white;
+    background: black;
+    border: none;
+}
+
+.plusview p.on {
+    display: block;
+}
+
+.box3 ul {
+    display: none;
+}
+
+.box3 ul.on {
+    display: block;
+}
+
+.box3 > ul > li {
+    font-size: 1.6rem;
+    margin-top: 11px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.box3 > ul > li::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #005bab;
+    position: absolute;
+    left: 0px;
+    top: 8px;
+    border-radius: 50%;
+}
+
+.box3 > ul > li a {
+    width: 450px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+.box3 > ul > li a:hover {
+    text-decoration: underline;
+}
+
+.newsletter {
+    width: 560px;
+    height: 155px;
+    background: url(../img/newsletter01.jpg) no-repeat left / cover;
+}
+
+.box5 div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box5 a {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1.5rem;
+}
+
+.link a:nth-child(1) { background: url(../img/sns_blog.png) no-repeat center / 70%;}
+.link a:nth-child(2) { background: url(../img/sns_youtube.png) no-repeat center / 70%;}
+.link a:nth-child(3) { background: url(../img/sns_facebook.png) no-repeat center / 70%;}
+
+/* 섹션3----------------------------------------------------------------- */
+.section3 {
+    padding-top: 60px;
+    background: linear-gradient(to top, white 70%, #e2e2e2 70%);
+}
+
+.section3 .inner {
+    padding: 20px;
+}
+
+.report {
+    margin: 0 auto;
+    display: flex;
+    background: white;
+    box-shadow: 0 0 10px black;
+}
+
+.report > div:first-child {
+    width: 20%;
+    background: #005BAB;
+    color: white;
+}
+
+h3 {
+    font-size: 4rem;
+    padding: 26px 0 26px 35px;
+}
+
+.filter {
+    padding-bottom: 50px;
+}
+
+.filter li {
+    font-size: 2.6rem;
+    font-weight: bold;
+    padding: 15px 0 15px 35px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.filter li:hover,
+.filter li.on {
+    background: white;
+    color: #005BAB;
+    padding-left: 50px;
+    transition: 0.5s;
+}
+
+.report > div:last-child {
+    width: 80%;
+}
+
+.contents {
+    height: 428px;
+    display: none;
+}
+
+.contents.on {
+    display: block;
+}
+
+.contents .swiper-slide {
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.contents .swiper-slide > div {
+    margin-right: 40px;
+}
+
+.contents .swiper-slide > div a {
+    display: flex;
+    flex-direction: column;
+}
+
+.contents img {
+    width: 210px;
+    height: 288px;
+}
+
+.contents p {
+    width: 210px;
+    font-size: 1.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.business {
+    padding: 40px 0;
+}
+
+.business div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.business p:nth-child(1) {background: url(../img/business1.jpg) no-repeat left / cover;}
+.business p:nth-child(2) {background: url(../img/business2.jpg) no-repeat left / cover;}
+.business p:nth-child(3) {background: url(../img/business3.jpg) no-repeat left / cover;}
+.business p:nth-child(4) {background: url(../img/business4.jpg) no-repeat left / cover;}
+.business p:nth-child(5) {background: url(../img/business5.jpg) no-repeat left / cover;}
+.business p:nth-child(6) {background: url(../img/business6.jpg) no-repeat left / cover;}
+.business p:nth-child(7) {background: url(../img/business7.jpg) no-repeat left / cover;}
+.business p:nth-child(8) {background: url(../img/business8.jpg) no-repeat left / cover;}
+.business p:nth-child(9) {background: url(../img/business9.jpg) no-repeat left / cover;}
+.business p:nth-child(10) {background: url(../img/business10.jpg) no-repeat left / cover;}
+
+.business p {
+    width: 248px;
+    height: 229px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.business p:nth-child(1)::after,
+.business p:nth-child(2)::after,
+.business p:nth-child(3)::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: url(../img/open.svg) no-repeat left / cover;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+}
+
+.business p a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    word-break: keep-all;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.business p:hover {
+    background-position: center;
+    background-size: 110%;
+}
+
+/* footer----------------------------------------------------------------- */
+footer {
+    background: #231F20;
+}
+
+.ftop .inner {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #676767;
+    padding: 40px 0 20px;
+}
+
+.ftop div {
+    display: flex;
+    align-items: center;
+}
+
+.ftop p {
+    color: #676767;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.ftop select {
+    width: 240px;
+    height: 40px;
+    font-size: 1.6rem;
+    color: #676767;
+    background: #231F20;
+    margin-right: 10px;
+}
+
+.ftop option {
+    font-size: inherit;
+    background: white;
+    color: black;
+}
+
+.ftop img {
+    cursor: pointer;
+}
+
+.fbot {
+    padding: 20px 0 80px;
+}
+
+.fbot img {
+    float: left;
+}
+
+.fbot .inner div {
+    float: left;
+    margin-left: 50px;
+    color: #676767;
+}
+
+.fbot div p {
+    font-size: 1.6rem;
+}
+
+.toTop {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 90%;
+    right: 5%;
+    background: #474747;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 33;
+    display: none;
+}
+
+
+
+
+@media (max-width:1399px) {
+    body {
+        margin: 0 auto;
+        min-width: 1200px;
+        max-width: 1399px;
+    }
+    
+    .inner {
+        width: 96%;
+    }
+
+    .section2 .inner > div {
+        width: 50%;
+    }
+
+    .section2 .inner > div > div {
+        padding: 10px;
+    }
+
+    .Swiper2 {
+        width: 100%;
+        height: 25vw;
+        position: relative;
+    }
+
+    .cardnews {
+        width: 32%;
+        height: 16vw;
+    }
+
+    h3 {
+        font-size: 3.5rem;
+        padding: 26px 0 26px 20px;
+    }
+
+    .filter {
+        padding-bottom: 40px;
+    }
+
+    .filter li {
+        font-size: 2rem;
+        padding: 15px 0 15px 20px;
+    }
+
+    .filter li:hover,
+    .filter li.on { 
+        background: white;
+        color: #005BAB;
+        padding-left: 35px;
+    }
+
+    .contents {
+        height: 379px;
+    }
+
+    .contents .swiper-slide > div {
+        margin-right: 20px;
+    }
+
+    .contents img {
+        width: 15vw;
+        height: 21vw;
+    }
+
+    .contents p {
+        width: 15vw;
+    }
+
+    .business p {
+        width: 16vw;
+        height: 15vw;
+    }
+
+    .business p a {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,624 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: 'Noto Sans KR', sans-serif;
+    /* outline: 1px solid aqua; */
+}
+
+body {
+    margin: 0 auto;
+    min-width: 1200px;
+    max-width: 1920px;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+    display: block;
+}
+
+span {
+    font: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.inner {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 섹션1----------------------------------------------------------------- */
+.section1 {
+    padding-bottom: 100px;
+    background: url(../img/subBg.jpg) no-repeat top / cover;
+}
+
+.sec1top {
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.sec1top .inner {
+    padding-top: 30px;
+}
+
+.member {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    background: url(../img/logo.png) no-repeat left / contain;
+    width: 270px;
+    height: 51px;
+}
+
+.member div {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.member div a:nth-child(3) {
+    padding: 5px;
+    border: 1px solid white;
+}
+
+.menuicon {
+    display: none;
+}
+
+.member div a {
+    margin-right: 20px;
+}
+
+.menu {
+    margin-top: 30px;
+}
+
+.gnb {
+    width: 100%;
+    display: flex;
+}
+
+.gnb > li {
+    flex: 1;
+    font-size: 2.6rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.gnb > li:hover {
+    text-decoration: underline;
+}
+
+.sec1top.on {
+    background: white;
+    border-bottom-color: #005BAB;
+}
+
+.sec1top.on .inner .logo {
+    background: url(../img/logohover.png) no-repeat left / contain;
+}
+
+.sec1top.on .inner .member div a {
+    color: #005BAB;
+    border-color: #005BAB;
+}
+
+.sec1top.on .inner .gnb > li {
+    color: #005BAB;
+}
+
+.snb {
+    position: absolute;
+    top: 57px;
+    width: 100%;
+    background: white;
+    z-index: 33;
+    display: none;
+    border: 3px solid #005BAB;
+    border-top: none;
+}
+
+.snb.on {
+    display: block;
+}
+
+.snb > li {
+    font-size: 1.6rem;
+    color: black;
+    padding: 10px 0;
+}
+
+.snb > li:hover {
+    font-weight: bold;
+    color: #005BAB;
+    text-decoration: underline;
+}
+
+h1 {
+    float: left;
+    font-size: 3.6rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 150px;
+}
+
+h1 span {
+    font-size: 4.6rem;
+}
+
+.Swiper1 {
+    float: right;
+    width: 500px;
+    height: 350px;
+    margin-top: 235px;
+}
+
+.swiper-slide {
+    display: flex;
+    background: white;
+}
+
+.Swiper1 .swiper-slide > div {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.Swiper1 .swiper-slide > div a > p:nth-child(2) {
+    font-size: 1.8rem;
+    margin: 15px 0 8px;
+}
+
+.Swiper1 .swiper-slide > div a > p:last-child {
+    font-size: 1.4rem;
+    color: #535353;
+}
+
+/* 섹션2 aside----------------------------------------------------------------- */
+.section2 .inner {
+    display: flex;
+}
+
+aside {
+    width: 220px;
+    border-left: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 5px solid #292929;
+}
+
+aside > ul > li {
+    font-size: 1.6rem;
+    color: #696969;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+aside > ul > li > a {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+aside > ul > li:hover > a {
+    background: #5D92C7;
+    color: white;
+    padding-left: 40px;
+}
+
+aside > ul > li.on > a {
+    background: #5D92C7;
+    color: white;
+    font-weight: bold;
+    padding-left: 40px;
+}
+
+aside i {font-size: inherit;}
+
+.asidesnb {
+    display: none;
+}
+
+aside div {
+    padding: 40px;
+}
+
+aside div p:nth-child(1) {background: url(../img/ico_quick01.gif) no-repeat 10px center;}
+aside div p:nth-child(2) {background: url(../img/ico_quick02.gif) no-repeat 10px center;}
+aside div p:nth-child(3) {background: url(../img/ico_quick03.gif) no-repeat 17px center;}
+
+
+aside div p a {
+    font-size: 1.4rem;
+    color: #696969;
+    padding: 20px 0 20px 55px;
+    border-bottom: 2px dashed #676767;
+}
+
+/* 섹션2 contents----------------------------------------------------------------- */
+.contents {
+    width: 1180px;
+    padding-left:50px;
+}
+
+.conhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.conhead > div:first-child > p {
+    font-size: 1.6rem;
+    color: #696969;
+    padding: 25px 0;
+}
+
+.conhead a {
+    display: inline-block;
+}
+
+.conhead i {
+    font-size: inherit;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h3 + p {
+    font-size: 1.6rem;
+    margin: 5px 0;
+}
+
+.share {
+    display: flex;
+}
+
+.share > p > a {
+    width: 40px;
+    height: 40px;
+    line-height: 37px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #c4c4c4;
+    border-right: none;
+}
+
+.share > p:nth-child(1) {color: #2FB60E;}
+.share > p:nth-child(2) {color: #3B5997;}
+.share > p:nth-child(3) {color: #00B8F4;}
+.share > p:last-child { border-right: 1px solid #c4c4c4;}
+
+.conbody {
+    background: url(../img/Line.png) no-repeat 39px 20px;
+}
+
+.conbody > div {
+    display: flex;
+    justify-content: center;
+}
+
+.conbody p, .conbody li {
+    font-size: 1.4rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.conbody p {
+    border-radius: 5px;
+}
+
+h6 {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    font-size: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    background: #005BAB;
+    color: white;
+    cursor: pointer;
+}
+
+.conbody p {
+    padding: 10px 30px;
+    background: #585858;
+    color: white;
+    font-weight: bold;
+}
+
+.conbody li {
+    width: 100px;
+    word-break: keep-all;
+    padding: 5px;
+    border: 1px solid #c4c4c4;
+    border-top: none;
+}
+
+.conbody li:hover {
+    color: #50B0EB;
+}
+
+.conbody span {
+    line-height: 40px;
+}
+
+.conbody > div ul > li:first-child {
+    height: 52px;
+    border-radius: 5px 5px 0 0;
+    background: #50B0EB;
+    color: white;
+}
+
+.conbody > div ul > li:last-child {
+    border-radius: 0 0 5px 5px;
+    background: white;
+}
+
+
+.conbody > .ogr1 {
+    align-items: center;
+    position: relative;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.ogr1 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ogr1 div ul {
+    margin-bottom: 20px;
+}
+
+.conbody .ogr1 ul li:first-child {
+    background: #585858;
+    color: white;
+    font-weight: bold;
+    height: auto;
+    padding: 10px 30px;
+}
+
+.conbody > .ogr2 {
+    justify-content: flex-end;
+}
+
+.ogr2 ul:last-child {
+    margin: 0 160px 0 20px;
+}
+
+.ogr3 {
+    margin-bottom: 50px;
+}
+
+.conbody > .ogr4 {
+    justify-content: space-between;
+}
+
+.confooter {
+    margin-top: 100px;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 30px 0;
+    width: 100%;
+    background: #EBEBEB;
+    border: 1px solid #c4c4c4;
+}
+
+form select {
+    width: 120px;
+    padding: 5px 10px;
+}
+
+form option {
+    font-size: inherit;
+}
+
+form input[type=text] {
+    margin: 0 5px;
+    padding: 0 10px;
+}
+
+form .button {
+    padding: 5px 20px;
+    font-weight: bold;
+    color: white;
+    background: #666666;
+    display: inline-block;
+    cursor: pointer;
+}
+
+form select, form input[type=text], form .button {
+    border-radius: 0;
+    border: 1px solid #c4c4c4;
+    font-size: 1.4rem;
+}
+
+table {
+    width: 100%;
+    border-top: 2px solid #005BAB;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+tr {
+    border-bottom: 1px solid #c4c4c4;
+}
+
+tr:first-of-type {
+    background: #f1f1f1;
+}
+
+th {
+    font-weight: bold;
+}
+
+th, td {
+    padding: 10px 0;
+    font-size: 1.6rem;
+    text-align: center;
+    background: white;
+}
+
+.detail {
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+
+.detail table {
+    width: 70%;
+}
+
+
+/* footer----------------------------------------------------------------- */
+footer {
+    background: #231F20;
+}
+
+.ftop .inner {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #676767;
+    padding: 40px 0 20px;
+}
+
+.ftop div {
+    display: flex;
+    align-items: center;
+}
+
+.ftop p {
+    color: #676767;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.ftop select {
+    width: 240px;
+    height: 40px;
+    font-size: 1.6rem;
+    color: #676767;
+    background: #231F20;
+    margin-right: 10px;
+}
+
+.ftop option {
+    font-size: inherit;
+    background: white;
+    color: black;
+}
+
+.ftop img {
+    cursor: pointer;
+}
+
+.fbot {
+    padding: 20px 0 80px;
+}
+
+.fbot img {
+    float: left;
+}
+
+.fbot .inner div {
+    float: left;
+    margin-left: 50px;
+    color: #676767;
+}
+
+.fbot div p {
+    font-size: 1.6rem;
+}
+
+.toTop {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 90%;
+    right: 5%;
+    background: #474747;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* ie 공통요소 */
+.is-ie h6 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.is-ie .ogr1 > div {
+    transform: translateX(50%);
+}
+
+.is-ie .ogr1 > p {
+    transform: translateX(-50%);
+}
+
+.is-ie .conbody li {
+    padding: 5px 3px;
+}

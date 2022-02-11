@@ -1,0 +1,242 @@
+body {
+    min-width: 768px;
+    max-width: 1199px;
+}
+
+.inner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 섹션1----------------------------------------------------------------- */
+.logo {
+    margin-left: 10px;
+}
+
+.member div a {
+    display: none;
+}
+
+.member div.on {
+    position: fixed;
+    right: 0;
+    z-index: 35;
+    color: #005BAB;
+}
+
+.member div.on a {
+    display: block;
+}
+
+.member div a:nth-child(3) {
+    border: 1px solid #005BAB;
+}
+
+.member div .menuicon {
+    display: block;
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+    width: 50vw;
+    height: 100vh;
+    background: white;
+    z-index: 34;
+    display: none;
+}
+
+.gnb {
+    margin-top: 100px;
+    width: 50vw;
+    height: 100%;
+    overflow-y: auto;
+    background: white;
+    display: block;
+}
+
+.menu.on {
+    display: block;
+    position: fixed;
+}
+
+.gnb > li {
+    background: #005BAB;
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-align: center;
+    position: static;
+    padding: 0;
+}
+
+.gnb > li a {
+    height: 100%;
+    padding: 10px 0;
+}
+.gnb > li:hover {
+    text-decoration: none;
+}
+
+.sec1top.on {
+    background: none;
+    border-bottom-color: transparent;
+}
+
+.sec1top.on .inner .logo {
+    background: url(../img/logo.png) no-repeat center / contain;
+}
+
+.sec1top.on .inner .gnb > li {
+    color: white;
+    background: #005BAB;
+}
+
+.snb {
+    position: static;
+    border: none;
+}
+
+.snb > li {
+    font-size: 2rem;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+/* 섹션2 ----------------------------------------------------------------- */
+aside {
+    display: none;
+}
+
+.contents {
+    width: 100%;
+    padding-left: 0;
+}
+
+.conhead {
+    padding: 0 10px;
+}
+
+.share > p:nth-child(3) > a {
+    border-right: 1px solid #c4c4c4;
+}
+
+.conbody {
+    background: url(../img/Linet.png) no-repeat 50% 75px;
+}
+
+.conbody > div {
+    width: 320px;
+    margin: 20px auto 0;
+    justify-content: flex-end;
+}
+
+h6 {
+    width: 320px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 2.6rem;
+    border-radius: 5px;
+    position: static;
+    order: 1;
+}
+
+.conbody > .ogr1 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.ogr1 div {
+    order: 2;
+    margin: 20px 0;
+    align-items: flex-end;
+}
+
+.ogr1 > p {
+    order: 3;
+}
+
+.ogr2 ul:last-child {
+    margin: 0 33px 0 20px;
+}
+
+.conbody > .ogr4 {
+    width: 80vw;
+    padding: 3px;
+    overflow-x: auto;
+    margin-top: 27px;
+    border: 3px solid #c4c4c4;
+}
+
+.conbody > .ogr4 > ul {
+    margin-right: 10px;
+}
+
+.confooter {
+    margin-top: 50px;
+    padding: 0 10px;
+}
+
+.detail table {
+    width: 90%;
+}
+
+/* footer----------------------------------------------------------------- */
+.ftop .inner {
+    padding: 20px 10px;
+}
+
+.ftop select {
+    font-size: 1.6rem;
+}
+
+.fbot {
+    padding: 20px 0 50px;
+}
+
+.fbot .inner {
+    padding: 0 10px;
+}
+
+.fbot .inner div {
+    float: unset;
+}
+
+.fbot img, .fbot .inner div {
+    float: unset;
+    margin: 0;
+}
+
+.fbot div p {
+    font-size: 1.4rem;
+    word-break: keep-all;
+}
+
+.toTop {
+    left: auto;
+}
+
+
+/* ie 공통요소 */
+.is-ie h6 {
+    transform: translateX(0);
+}
+
+.is-ie .ogr1 > div {
+    transform: translateX(0);
+}
+
+.is-ie .ogr1 > p {
+    transform: translateX(0);
+}
+
+.is-ie .ogr3 > p {
+    transform: translateY(0);
+}
+
+.is-ie .ogr4 > ul {
+    transform: translateY(0);
+}

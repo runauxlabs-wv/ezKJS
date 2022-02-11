@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>兵庫旅</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="css/hyogo-jp.css">
+    <link rel="stylesheet" type="text/css" media="all and (max-width:1199px)" href="css/hyogot-jp.css">
+    <link rel="stylesheet" type="text/css" media="all and (max-width:767px)" href="css/hyogom-jp.css">
+</head>
+
+<body>
+    <header>
+        <div class="headlogo">
+            <a href="#">
+                <img src="img/hyogo/hyogo_kenki.png" alt="ロゴ" title="ロゴ">
+                <p class="kanji">兵庫県</p>
+            </a>
+        </div>
+        <nav>
+            <p data-id="remote1">観光地図</p>
+            <p data-id="remote2">観光スポット</p>
+            <p data-id="remote3">モデルコース</p>
+            <p data-id="remote4">関連サイト</p>
+        </nav>
+        <div class="language">
+            <a href="index.html"><img src="img/svg/homeH.svg" alt="最初画面へ"></a>
+            <a href="hyogo.html"><img src="img/svg/languageH.svg" alt="한국어"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a data-id="remote1"></a></li>
+                <li><a data-id="remote2"></a></li>
+                <li><a data-id="remote3"></a></li>
+                <li><a data-id="remote4"></a></li>
+                <li><a href="index.html"></a></li>
+                <li><a href="hyogo.html"></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="section">
+        <div class="block1">
+            <iframe src="https://www.youtube-nocookie.com/embed/DGRPS7Z4z6w" title="兵庫観光本部公式YOUTUBE" allowfullscreen></iframe>
+            <div class="title">
+                <h1 class="kanji">兵庫県</h1>
+            </div>
+        </div>
+        <div class="block2" id="remote1">
+            <h3>観光地図</h3>
+            <div id="map"></div>
+        </div>
+        <div class="block3" id="remote2">
+            <h3>観光スポット</h3>
+            <div class="filter">
+                <p id="allselect" class="on">全て</p>
+                <p id="bunka">歴史·文化</p>
+                <p id="onsen">温泉</p>
+                <p id="taiken">体験·見学</p>
+                <p id="sizen">自然</p>
+                <p id="kankou">観光施設</p>
+                <p id="gurume">グルメ</p>
+            </div>
+            <div class="kankouspot">
+                <p id="loadingbox"></p>
+            </div>
+            <div class="kankoudetail">
+            </div>
+        </div>
+        <div class="block4" id="remote3">
+            <h3>モデルコース</h3>
+            <h4>神戸市</h4>
+            <div class="kobestart swiper mySwiper">
+                <ul class="content swiper-wrapper">
+                    <li class="schedule swiper-slide"><b>関西国際空港</b></li>
+                    <li class="schedule swiper-slide"><b>神戸三宮</b>
+                        <ol class="access">
+                            <li>関西国際空港で三宮行きのバスに乗る</li>
+                            <li>神戸三宮で下車</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>神戸六甲山牧場</b><i class="fas fa-info-circle info" data-id="rokkopasture"></i>
+                        <ol class="access">
+                            <li>JR三宮駅よりJR六甲道駅へ移動</li>
+                            <li>16番バスに乗り、ケーブル下駅で下車</li>
+                            <li>ケーブルカーに乗って六甲山上駅へ移動</li>
+                            <li>摩耶スカイシャトルバスに乗り、六甲山牧場で下車</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>六甲高山植物園</b><i class="fas fa-info-circle info" data-id="rokkogarden"></i>
+                        <ol class="access">
+                            <li>牧場で六甲山上駅行きのバスに乗る</li>
+                            <li>記念碑台で下車</li>
+                            <li>ロープウェイ行きのバスに乗る</li>
+                            <li>オルゴールミュージアムで下車して徒歩約5分</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>ガーデンテラス</b><i class="fas fa-info-circle info" data-id="rokkoteras"></i>
+                        <ol class="access">
+                            <li>オルゴールミュージアムでバスに乗る</li>
+                            <li>六甲ガーデンテラスで下車</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>好古園</b><i class="fas fa-info-circle info" data-id="kokoen"></i>
+                        <ol class="access">
+                            <li>姫路城門に出て右側へ移動</li>
+                            <li>または、城郭を反時計回りに沿って移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>姫路城</b><i class="fas fa-info-circle info" data-id="himejicastle"></i>
+                        <ol class="access">
+                            <li>有馬口駅で新開千絵行きの電車に乗り換える</li>
+                            <li>谷上駅で下車、北神線に乗り換える</li>
+                            <li>新神戸駅で下車、新幹線に乗り換える</li>
+                            <li>姫路駅で下車、城まで徒歩移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>瑞宝寺公園</b><i class="fas fa-info-circle info" data-id="zuihoji"></i>
+                        <ol class="access">
+                            <li>チェックアウト及び荷物を預ける</li>
+                            <li>瑞宝寺公園まで徒歩移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>有馬温泉</b><i class="fas fa-info-circle info" data-id="arimaonsen"></i>
+                        <ol class="access">
+                            <li>有馬ロープウェイに乗って有馬温泉へ</li>
+                            <li>チェックイン及び休憩</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>ロープウェイ</b><i class="fas fa-info-circle info" data-id="arimaropeway"></i>
+                        <ol class="access">
+                            <li>ガーデンテラスより六甲有馬ロープウェイ乗り場まで移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>神戸宿へ移動</b>
+                        <ol class="access">
+                            <li>姫路駅へ移動して新幹線に乗る</li>
+                            <li>新神戸駅で下車</li>
+                            <li>宿へ移動</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>布引の滝</b><i class="fas fa-info-circle info" data-id="nunobiki"></i>
+                        <ol class="access">
+                            <li>新神戸駅の北口より徒歩約10分</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>能福寺</b><i class="fas fa-info-circle info" data-id="nohukuji"></i>
+                        <ol class="access">
+                            <li>新神戸駅で市営地下鉄に乗り、三宮駅へ移動</li>
+                            <li>JR線に乗り換え、兵庫駅で下車</li>
+                            <li>兵庫駅の南口より徒歩約15分</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>メリケンパーク</b><i class="fas fa-info-circle info" data-id="meriken"></i>
+                        <ol class="access">
+                            <li>中央市場前駅まで徒歩移動</li>
+                            <li>地下鉄に乗り、みなと元町駅で下車</li>
+                            <li>海洋博物館方向で徒歩約5分</li>
+                        </ol>
+                    </li>
+                    <li class="schedule swiper-slide"><b>生田神社</b><i class="fas fa-info-circle info" data-id="ikutajinja"></i>
+                        <ol class="access">
+                            <li>三宮駅向けに徒歩移動(約15分)</li>
+                            <li>観光が終わったら三宮で関西空港行きのバスに乗る</li>
+                            <li>関西国際空港第1ターミナルで下車</li>
+                        </ol>
+                    </li>
+                </ul>
+                <div class="swiper-button-next swiperbutton"></div>
+                <div class="swiper-button-prev swiperbutton"></div>
+                <div class="swiper-pagination"></div>
+                <div class="flag flag1">
+                    <h6>1日目</h6>
+                </div>
+                <div class="flag flag2">
+                    <h6>2日目</h6>
+                </div>
+                <div class="flag flag3">
+                    <h6>3日目</h6>
+                </div>
+            </div>
+        </div>
+        <div class="block5" id="remote4">
+            <h3>関連サイト</h3>
+            <div>
+                <div class="chain">
+                    <p class="logo1"><a href="https://www.japan.travel/jp/" target="_blank"></a></p>
+                    <p>日本政府観光局</p>
+                </div>
+                <div class="chain">
+                    <p class="logo2"><a href="https://www.hyogo-tourism.jp/" target="_blank"></a></p>
+                    <p>兵庫観光本部</p>
+                </div>
+                <div class="chain">
+                    <p class="logo3"><a href="https://www.feel-kobe.jp/" target="_blank"></a></p>
+                    <p>神戸公式<br>観光サイト</p>
+                </div>
+                <div class="chain">
+                    <p class="logo4"><a href="http://www.arima-onsen.com/" target="_blank"></a></p>
+                    <p>有馬温泉<br>観光協会</p>
+                </div>
+                <div class="chain">
+                    <p class="logo5"><a href="https://www.kansai-airport.or.jp/" target="_blank"></a></p>
+                    <p>関西国際空港</p>
+                </div>
+                <div class="chain">
+                    <p class="logo6"><a href="https://www.himeji-kanko.jp/" target="_blank"></a></p>
+                    <p>姫路観光ナビ</p>
+                </div>
+                <div class="chain">
+                    <p class="logo7"><a href="https://www.rokkosan.com/" target="_blank"></a></p>
+                    <p>六甲山</p>
+                </div>
+                <div class="chain">
+                    <p class="logo8"><a href="https://tabelog.com/" target="_blank"></a></p>
+                    <p>食べログ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>COPYRIGHT © HYOGO TOUR ALL RIGHT RESERVED.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwKEbuaOVo4-wBsosgzS99XmpKp4j7N1w&callback=initMap&region=kr" async></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+    <script src="js/hyogo-jp.js"></script>
+    <script src="js/hyogo.js"></script>
+</body>
+
+</html>

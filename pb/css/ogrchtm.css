@@ -1,0 +1,102 @@
+body {
+    min-width: 320px;
+    max-width: 767px;
+}
+
+/* 섹션1----------------------------------------------------------------- */
+.section1 {
+    height: auto;
+}
+
+.member div a {
+    font-size: 1.5rem;
+}
+
+.logo {
+    width: 200px;
+}
+
+.menu {
+    width: 100vw;
+    background: white;
+}
+
+.gnb {
+    width: 100vw;
+}
+
+.gnb > li {
+    font-size: 2rem;
+}
+
+.snb > li {
+    font-size: 1.6rem;
+}
+
+/* 섹션2 contents----------------------------------------------------------------- */
+.conhead {
+    display: block;
+}
+
+.share {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px ;
+}
+
+
+
+form {
+    display: block;
+    margin: 10px 0;
+    padding: 15px 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+form select {
+    display: block;
+    margin: 0 0 10px 5px;
+    width: 100px;
+    padding: 5px;
+}
+
+form input[type=text] {
+    margin: 0 5px;
+    padding: 5px;
+}
+
+.detail table {
+    width: 100%;
+}
+
+th, td {
+    padding: 10px 0;
+    font-size: 1.3rem;
+}
+
+/* footer----------------------------------------------------------------- */
+.ftop .inner {
+    display: block;
+}
+
+.ftop p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.ftop div {
+    justify-content: center;
+}
+
+.fbot .inner div {
+    float: unset;
+}
+
+.fbot div p {
+    font-size: 1.1rem;
+}
+
+.fbot {
+    padding-bottom: 20px;
+}

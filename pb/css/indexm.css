@@ -1,0 +1,256 @@
+body {
+    min-width: 320px;
+    max-width: 767px;
+}
+
+/* 섹션1----------------------------------------------------------------- */
+.section1 {
+    height: auto;
+}
+
+.member div a {
+    font-size: 1.5rem;
+}
+
+.logo {
+    width: 200px;
+}
+
+.menu {
+    width: 100vw;
+    background: white;
+}
+
+.gnb {
+    width: 100vw;
+}
+
+.gnb > li {
+    font-size: 2rem;
+}
+
+.snb > li {
+    font-size: 1.6rem;
+}
+
+h1 {
+    display: none;
+}
+
+.Swiper1 {
+    float: none;
+    width: 90vw;
+    height: 63vw;
+    margin: 100px auto 0;
+    border-bottom: 1px solid black;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.Swiper1 .swiper-slide > div a > p:nth-child(2) {
+    font-size: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.Swiper1 .swiper-slide > div a > p:last-child {
+    display: none;
+}
+
+/* 섹션2----------------------------------------------------------------- */
+.section2 .inner {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section2 .inner > div {
+    width: 94vw;
+    margin: 0 auto;
+}
+
+.section2 .inner > div:nth-child(1){
+    order: 2;
+}
+
+.section2 .inner > div:nth-child(2) {
+    order: 1;
+}
+
+.selectbox {
+    margin-bottom: 10px;
+}
+
+.selectbox > p {
+    padding: 6px 12px;
+    font-size: 1.4rem;
+}
+
+.plusview p {
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+}
+
+.box3 ul span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.newsletter {
+    height: 25vw;
+}
+
+.box5 a {
+    width: 33vw;
+    height: 33vw;
+}
+
+.Swiper2 {
+    width: 90vw;
+    height: 50vw;
+}
+
+.cardnews {
+    width: 32%;
+    height: 30vw;
+}
+
+.cardnews p {
+    font-size: 1.2rem;
+}
+
+.cardnews p:last-child {
+    font-size: 1rem;
+}
+
+.cardnews::after {
+    padding: 3px 5px;
+    font-size: 1.2rem;
+}
+
+/* 섹션3----------------------------------------------------------------- */
+.section3 {
+    padding-top: 30px;
+}
+
+h3 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 13px 0;
+}
+
+.report {
+    display: block;
+    box-shadow: 0 0 10px black;
+}
+
+.report > div:first-child {
+    width: 100%;
+}
+
+.filter {
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter li {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: center;
+    flex: 1 0;
+}
+
+.filter li:hover,
+.filter li.on {
+    background: white;
+    color: #005BAB;
+    padding-left: 0;
+}
+
+.report > div:last-child {
+    width: 100%;
+}
+
+.contents {
+    height: 400px;
+}
+
+.contents .swiper-slide {
+    width: 100%;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.contents img {
+    width: 35vw;
+    max-width: 140px;
+    height: 48vw;
+    max-height: 160px;
+}
+
+.contents p {
+    width: 35vw;
+    font-size: 1.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.business div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+}
+
+.business p {
+    flex: 0 0 45vw;
+    width: 45vw;
+    height: 42vw;
+    margin-right: 10px;
+}
+
+.business p a {
+    font-size: 4.5vw;
+}
+
+.business p:nth-child(1)::after,
+.business p:nth-child(2)::after,
+.business p:nth-child(3)::after {
+    font-size: 2rem;
+}
+
+/* footer----------------------------------------------------------------- */
+.ftop .inner {
+    display: block;
+}
+
+.ftop p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.ftop div {
+    justify-content: center;
+}
+
+.fbot div p {
+    font-size: 1.1rem;
+}
+
+.fbot {
+    padding-bottom: 20px;
+}

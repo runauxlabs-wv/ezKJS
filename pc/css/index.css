@@ -1,0 +1,783 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Sharp|Material+Icons+Two+Tone|Material+Icons+Outlined');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: 'Noto Sans KR', sans-serif;
+    /* outline: 1px solid aqua; */
+}
+
+li {
+    list-style: none;
+    font: inherit;
+}
+
+option, span {
+    font: inherit;
+}
+
+strong {
+    font: inherit;
+    font-weight: bold;
+    color: #dd2648;
+}
+
+.inner {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+select, input {
+    border: 1px solid #aaaaaa;
+    border-radius: 0;
+    padding: 10px;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* 헤더-------------------------------------------------------------------------------------- */
+header select {
+    font-size: 3rem;
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+header .inner {
+    background: url(../img/bg.png) no-repeat top / 100vw 100vh;
+    background-color: rgba(255,255,255,0.2);
+    background-blend-mode: lighten;
+    max-width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+header .inner > div {
+    width: 900px;
+    margin: 150px auto;
+}
+
+.menubtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    z-index: 99999;
+}
+
+.menubtn p {
+    width: 40px;
+    height: 3px;
+    background: #301d3f;
+}
+
+.menubtn.active p {
+    background: transparent;
+}
+
+.menubtn::before {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background-color: #301d3f;
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 0.3s;
+}
+
+.menubtn::after {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background-color: #301d3f;
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 0.3s;
+}
+
+.menubtn.active::before {
+    top: 25px;
+    left: 5px;
+    transform: rotate(45deg);
+}
+
+.menubtn.active::after {
+    top: 25px;
+    left: 5px;
+    transform: rotate(-45deg);
+}
+
+.title {
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.7) url(../img/titlebg.svg) no-repeat center 20px / 100px;
+    position: relative;
+    margin: 50px 50px 0;
+    padding-bottom: 20px;
+    float: left;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.title:hover {
+    background-position: center 10px;
+    background-size: 60%;
+    transition: 0.5s;
+}
+
+.title p {
+    font-size: 2rem;
+}
+
+/* 단위변환-------------------------------------------------------------------------------------- */
+.calculator > div {
+    display: none;
+    margin-top: 200px;
+}
+
+.calculator > div > h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.calculator > div.on {
+    display: block;
+}
+
+.selector {
+    font-size: 2rem;
+    margin: 0 auto 20px;
+}
+
+.selector li {
+    float: left;
+    width: 20%;
+    padding: 5px 0;
+    text-align: center;
+    color: #c4c4c4;
+    border: 1px solid transparent;
+    border-right-color: #c4c4c4;
+    cursor: pointer;
+}
+
+.selector li:first-child {
+    border-left-color: #c4c4c4;
+}
+
+.selector li.on {
+    color: black;
+    text-decoration: underline;
+}
+
+.calList > div {
+    display: none;
+}
+
+.calList > div.on {
+    display: block;
+}
+
+.calList select {
+    font-size: 1.5rem;
+    float: right;
+    width: 30%;
+    border-right: none;
+}
+
+.calList input[type=text] {
+    width: 70%;
+    height: 45px;
+    font-size: 1.5rem;
+    text-align: right;
+    padding-right: 30px;
+    float: left;
+    border-left: none;
+    border-right: none;
+}
+
+.spec {
+    margin-top: 20px;
+    border: 1px solid #c4c4c4;
+}
+
+.spec p {
+    font-size: 1.4rem;
+    float: left;
+    width: 33.33333%;
+    height: 45px;
+    padding: 10px 0;
+}
+.spec span {
+    display: inline-block;
+}
+
+.spec span:first-child {
+    width: 50%;
+    float: left;
+    text-align: right;
+    padding-right: 10px;
+    color: #006AFF;
+    font-weight: bold;
+}
+.spec span:last-child {
+    width: 50%;
+    float: right;
+    text-align: left;
+}
+
+
+/* 퇴직금-------------------------------------------------------------------------------------- */
+
+.retire > div, .subpay {
+    margin-top: 20px;
+}
+
+.retire p, .retire input {
+    font-size: 1.5rem;
+}
+
+.date p, .subpay p, .average p {
+    float: left;
+}
+
+.date p:nth-child(2) {
+    margin-left: 100px;
+}
+
+.date input {
+    width: 150px;
+}
+
+.date img {
+    position: absolute;
+}
+
+.date p span {
+    font-size: 1.3rem;
+    color: #ff2f55;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.indateselect, .outdateselect {
+    font-size: 1.3rem;
+    color: #ff2f55;
+    font-weight: bold;
+    display: none;
+}
+
+.date p.on input {
+    border: 2px solid #ff2f55;
+}
+
+.date p.on span {
+    visibility: visible;
+}
+
+.indateselect.on, .outdateselect.on {
+    display: block;
+}
+
+.repay {
+    margin: 20px 0;
+}
+
+.repay input {
+    width: 95%;
+    text-align: right;
+}
+
+.subpay {
+    padding: 0 11px;
+}
+
+.subpay input {
+    width: 220px;
+    text-align: right;
+}
+
+.subpay p:nth-child(2), .average p:nth-child(2) {
+    float: right;
+}
+
+.retire > div:nth-child(3) {
+    padding: 20px;
+    background: #c4c4c4;
+    text-align: right;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.retire .average {
+    border: 1px solid #c4c4c4;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.retire fieldset {
+    border: 1px solid #ff2f55;
+    padding: 0 10px;
+}
+
+.retire legend {
+    font-size: 1.4rem;
+    color: #ff2f55;
+    text-align: right;
+}
+
+#ui-datepicker-div {
+    width: 300px;
+}
+
+.ui-datepicker-calendar {
+    height: 200px;
+}
+
+.ui-datepicker-calendar td a, .ui-datepicker-calendar thead span,
+.ui-datepicker .ui-datepicker-title select, .ui-datepicker .ui-datepicker-title option,
+.ui-datepicker-other-month {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.ui-datepicker .ui-datepicker-title select {
+    padding-left: 0;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+    display: none;
+}
+
+.retire li {
+    font-size: 1.3rem;
+    line-height: 30px;
+}
+
+.retire li::before {
+    content: "· ";
+}
+
+/* 사대보험-------------------------------------------------------------------------------------- */
+
+.insurance p, .insurance input {
+    font-size: 2rem;
+}
+
+.inpay p {
+    text-align: center;
+}
+
+.inpay p:first-child {
+    padding: 20px 0;
+}
+
+.inpay input {
+    width: 50%;
+    text-align: right;
+}
+
+.workperson {
+    margin-top: 20px;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.workperson p {
+    float: left;
+    text-align: center;
+    width: 50%;
+    line-height: 51px;
+}
+
+.workperson select {
+    font-size: 2rem;
+    width: 50%;
+    float: right;
+    text-align: center;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+}
+
+.insurResult {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.insurResult tr {
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.insurResult tr:first-child {
+    border-bottom: 2px solid #787878;
+}
+
+.insurResult tr:first-child th {
+    text-align: right;
+}
+
+.insurResult th, .insurance td {
+    font-size: 1.6rem;
+    padding: 10px 15px;
+    text-align: left;
+    width: 25%;
+}
+
+.insurance td {
+    text-align: right;
+}
+
+.insurance tr td:nth-child(2) span {
+    color: #ff2f55;
+    font-weight: bold;
+}
+
+.insurance tr td:nth-child(3) span {
+    color: #006AFF;
+    font-weight: bold;
+}
+
+.insurance li, .insurance li a {
+    font-size: 1.3rem;
+    line-height: 30px;
+}
+
+.insurance li::before {
+    content: "· ";
+}
+
+/* 디데이-------------------------------------------------------------------------------------- */
+
+.dDay p, .dDay input {
+    font-size: 1.5rem;
+}
+
+.dDay > div:nth-child(2) {
+    text-align: center;
+    border-bottom: 1px solid #c4c4c4;
+    padding-bottom: 20px;
+}
+
+.dDay img {
+    position: absolute;
+}
+
+.dDaydate p {
+    font-size: 2rem;
+}
+
+.dDaydate p:first-child {
+    padding: 20px 0;
+}
+
+.dDaydate p span {
+    font-size: 1.3rem;
+    color: #ff2f55;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.dDaydate p input {
+    text-align: center;
+}
+
+.dDaydate p.on input {
+    border: 2px solid #ff2f55;
+}
+
+.dDaydate p.on span:nth-of-type(1) {
+    visibility: visible;
+}
+
+.dDay > div:last-child {
+    padding-left: 60px;
+}
+
+.dDay > div:last-child input {
+    width: 150px;
+}
+
+#howday span {
+    color: #ff2f55;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 20px 0;
+    font-size: 2rem;
+}
+
+#dDay {
+    border: none;
+    width: 122.47px;
+    padding-left: 0;
+}
+
+.dDayinput p:nth-child(3) span {
+    border: 1px solid #aaa;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.dDayresult {
+    margin-left: 50px;
+}
+
+.dDayinput p {
+    margin-bottom: 10px;
+    height: 43px;
+    float: left;
+}
+
+.dDayinput p:nth-child(2n) {
+    float: right;
+    margin-right: 60px;
+}
+
+.dDayinput p:nth-child(2n) input {
+    margin-left: 20px;
+    text-align: center;
+}
+
+.calbutton {
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 3px 6px;
+    background: #301d3f;
+    color: white;
+    cursor: pointer;
+}
+
+.dDayinput p:nth-child(5) span {
+    color: #ff2f55;
+    font-weight: bold;
+    font-size: 1.3rem;
+    visibility: hidden;
+}
+
+.dDayinput p.on input {
+    border: 2px solid #ff2f55;
+}
+
+.dDayinput p.on span {
+    visibility: visible;
+}
+
+/* 주휴수당-------------------------------------------------------------------------------------- */
+
+.holiday p, .holiday input, .holiday select, .holiday span, .holiday form li {
+    font-size: 1.5rem;
+}
+
+.holiday h2 span {
+    font-size: 2rem;
+}
+
+.holiday > p {
+    background: #f0f0f0;
+    padding: 10px 5px;
+}
+
+.holiday .material-icons-outlined {
+    font-size: 1.8rem;
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}
+
+#holresult {
+    text-align: center;
+    background: #301d3f;
+    color: white;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.holiday > div:nth-child(3) > p:first-child {
+    margin-top: 20px;
+}
+
+.holiday > div:nth-child(3) > p:nth-child(2) {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    padding: 5px 20px;
+    color: #565656;
+}
+
+.holiday form ul li:first-child {
+    padding: 5px;
+}
+
+.worktime > div {
+    width: 50%;
+    float: left;
+}
+
+#hour {
+    border-left: none;
+    border-right: none;
+}
+
+#minute {
+    border-right: none;
+}
+
+.worktime select {
+    width: 100%;
+    text-align: center;
+}
+
+.workpay {
+    margin: 20px 0;
+}
+
+.workpay > div {
+    width: 85%;
+    margin-left: 5%;
+}
+
+.workpay > div p:first-child {
+    border: 1px solid #aaaaaa;
+}
+
+
+.workpay > span, .workpay > div {
+    float: left;
+}
+
+.workpay > span {
+    display: inline-block;
+    width: 10%;
+    line-height: 45px;
+    padding-left: 5px;
+}
+
+.workpay p {
+    width: 100%;
+}
+
+.workpay input {
+    width: 95%;
+    border: none;
+    text-align: right;
+}
+
+.holiday > div:nth-child(5) {
+    padding: 20px;
+    background: #c4c4c4;
+    text-align: right;
+}
+
+.holiday > ul li {
+    font-size: 1.3rem;
+    line-height: 30px;
+}
+
+.holiday > ul li::before {
+    content: "· ";
+}
+
+.whatholiday {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+
+.whatholiday div {
+    width: 600px;
+    background: white;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 10px;
+}
+
+h4 {
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.whatholiday .material-icons-outlined {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 3rem;
+}
+
+.whatholiday p:nth-child(2n-1) {
+    margin-top: 10px;
+    font-size: 1.8rem;
+}
+
+.whatholiday p:nth-child(2n-1)::before {
+    content: " · ";
+}
+
+.whatholiday p:nth-child(2n) {
+    font-size: 1.6rem;
+    margin-top: 3px;
+    color: #565656;
+}
+
+.hourselect, .minuteselect {
+    font-size: 1.3rem;
+    color: #ff2f55;
+    font-weight: bold;
+    text-align: right;
+    display: none;
+}
+
+.workpay p.on input {
+    border: 2px solid #ff2f55;
+}
+
+.hourselect.on, .minuteselect.on {
+    display: block;
+}

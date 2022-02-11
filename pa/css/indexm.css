@@ -1,0 +1,146 @@
+body {
+    display: block;
+    min-width: 320px;
+    max-width: 1199px;
+    min-height: 100vh;
+    user-select: none;
+}
+
+section {
+    width: 100vw;
+    min-width: 320px;
+    max-width: 100vw;
+    min-height: 50vh;
+    max-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 20vw;
+    height: auto;
+    min-width: 100px;
+    max-width: 350px;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+p {
+    font-size: 7vw;
+}
+
+h3 {
+    font-size: 25vw;
+}
+
+.hyogo .banner {
+    margin-left: 2%;
+}
+
+.hyogo img {
+    margin-bottom: 30px;
+}
+
+.ribbon {
+    height: auto;
+    overflow: none;
+}
+
+.gifu .banner {
+    margin-right: 2%;
+}
+
+.gifu img {
+    margin-top: 30px;
+}
+
+h1 {
+    visibility: visible;
+    writing-mode: horizontal-tb;
+    position: absolute;
+    left: 37%;
+}
+
+.hyogo h1 {
+    transform: translateX(0);
+    top: 10%;
+}
+
+.gifu h1 {
+    transform: translateX(0);
+    top: 70%;
+}
+
+h1 a {
+    display: block;
+    background: rgba(255, 255, 255, 0.5);
+    height: auto;
+    font-size: 3rem;
+    line-height: unset;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+@media (max-height: 500px) {
+    body {
+        display: flex;
+        min-width: 50vw;
+        max-width: 50vw;
+    }
+    
+    section {
+        width: 284px;
+        min-width: 50vw;
+        max-width: 50vw;
+        min-height: 100vh;
+        max-height: 100vh;
+    }
+    
+    h2 {
+        font-size: 8vw;
+    }
+    
+    p {
+        font-size: 4vw;
+    }
+    
+    h3 {
+        font-size: 25vh;
+    }
+    
+    .hyogo img {
+        margin-bottom: 10px;
+    }
+            
+    .gifu img {
+        margin-top: 10px;
+    }
+    
+    .hyogo h1 {
+        transform: translateX(0);
+        top: 25%;
+    }
+    
+    .gifu h1 {
+        transform: translateX(0);
+        top: 40%;
+        right: -67%;
+        left: auto;
+    }
+
+    h1 a {
+        height: auto;
+    }
+}
+
+@-moz-document url-prefix() {
+    .ribbon {
+        width: 33vw;
+    }
+
+    h3 {
+        line-height: 33vw;
+    }
+}

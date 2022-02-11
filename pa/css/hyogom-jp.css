@@ -1,0 +1,301 @@
+body {
+    min-width: 320px;
+    max-width: 767px;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+/* 헤더--------------------------------------------------------------------------------------- */
+header {
+    padding: 0 10px;
+    height: 50px;
+}
+
+header nav, .language {
+    display: none;
+}
+
+.menu {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/svg/menuH.svg) no-repeat center / 40px 40px;
+}
+
+.menu ul {
+    display: none;
+}
+
+.menu li {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    border-radius: 50%;
+    position: relative;
+    transform: translate(0, 50px);
+}
+
+.menu li:nth-child(1) {background-color: #01A0C7;}
+.menu li:nth-child(2) {background-color: #33b3d2;}
+.menu li:nth-child(3) {background-color: #66c6dd;}
+.menu li:nth-child(4) {background-color: #99d9e8;}
+.menu li:nth-child(5) {background-color: #ccecf3;}
+.menu li:nth-child(6) {background-color: #fff;}
+
+.menu li a {
+    position: absolute;
+    top: 0;
+}
+
+
+.menu li:nth-child(1) a {background: url(../img/svg/map.svg) no-repeat top / cover;}
+.menu li:nth-child(2) a {background: url(../img/svg/spot.svg) no-repeat top / cover;}
+.menu li:nth-child(3) a {background: url(../img/svg/course.svg) no-repeat top / cover;}
+.menu li:nth-child(4) a {background: url(../img/svg/site.svg) no-repeat top / cover;}
+.menu li:nth-child(5) a {background: url(../img/svg/homeH.svg) no-repeat top / cover;}
+.menu li:nth-child(6) a {background: url(../img/svg/languageH.svg) no-repeat top / cover;}
+
+
+/* 블록1--------------------------------------------------------------------------------------- */
+.title h1 {
+    font-size: 15rem;
+}
+
+.block1 iframe {
+    margin-top: 30px;
+    width: 250px;
+    height: 141px;
+}
+
+/* 블록2--------------------------------------------------------------------------------------- */
+.block2 {
+    padding-bottom: 50px;
+}
+
+#map {
+    width: 90vw;
+    height: 51vw;
+    margin: 30px auto 0;
+}
+
+/* 블록3--------------------------------------------------------------------------------------- */
+
+.filter {
+    width: 92vw;
+    display: block;
+    margin: 10px auto;
+}
+
+.filter > p {
+    float: left;
+    width: 19vw;
+    font-size: 1.8rem;
+    margin: 0 2vw 10px;
+    white-space: nowrap;
+}
+
+#allselect {
+    text-align: center;
+    height: 88px;
+    line-height: 66px;
+}
+
+.kankouspot > div > p:first-child::after {
+    font-size: 1.8rem;
+}
+
+.kankouspot > div > p:first-child {
+    width: 40vw;
+    height: 27vw;
+}
+
+.kankouspot > div > p:last-child {
+    font-size: 2rem;
+    padding: 1vw 0;
+    height: 11vw;
+}
+
+.kankoudetail.on {
+    position: fixed;
+}
+
+.overlay {
+    width: 90vw;
+}
+
+.overlay > p:first-child {
+    height: 60vw;
+}
+
+h6 {
+    font-size: 3rem;
+}
+
+.overlay > h6 {
+    margin: 10px 0;
+}
+
+.overlay > p:nth-of-type(2) {
+    margin: 10px 4vw;
+}
+
+.overlay > table {
+    margin: 30px 4vw 0;
+}
+/* 블록4--------------------------------------------------------------------------------------- */
+.block4 h4 {
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.kobestart.swiper {
+    width: 100vw;
+    height: 80vh;
+    margin: 20px 0 0;
+    position: relative;
+    border: 1px solid #01A0C7;
+    overflow: hidden;
+}
+
+.content.swiper-wrapper {
+    display: flex;
+    background-size: 0;
+    flex-flow: nowrap;
+    position: relative;
+
+}
+
+li.schedule.swiper-slide {
+    width: 100vw;
+    height: 80vh;
+    padding-top: 41vh;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    position: relative;
+    display: block;
+    background-size: 100vw 40vh;
+    background-position: center top;
+    text-align: center;
+}
+
+li.schedule i {
+    font-size: 4rem;
+    margin-left: 10px;
+}
+
+
+li.schedule b {
+    font-size: 3rem;
+}
+
+li.schedule:first-child::after,
+li.schedule:nth-child(8)::after,
+li.schedule:nth-child(12)::after {
+    background: #1FB0DE;
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+}
+
+li.schedule:first-child::after {
+    content: "1日目";
+}
+
+li.schedule:nth-child(8)::after {
+    content: "2日目";
+}
+
+li.schedule:nth-child(12)::after {
+    content: "3日目";
+}
+
+.content li:hover {
+    border: none;
+}
+
+.content > li:nth-child(1) {order: 1;}
+.content > li:nth-child(2) {order: 2;}
+.content > li:nth-child(3) {order: 3;}
+.content > li:nth-child(4) {order: 4;}
+.content > li:nth-child(5) {order: 5;}
+.content > li:nth-child(6) {order: 10;}
+.content > li:nth-child(7) {order: 9;}
+.content > li:nth-child(8) {order: 8;}
+.content > li:nth-child(9) {order: 7;}
+.content > li:nth-child(10) {order: 6;}
+.content > li:nth-child(11) {order: 11;}
+.content > li:nth-child(12) {order: 12;}
+.content > li:nth-child(13) {order: 13;}
+.content > li:nth-child(14) {order: 14;}
+.content > li:nth-child(15) {order: 15; background-position: 0 0;}
+
+ol.access {
+    background: none;
+    position: relative;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    z-index: 0;
+    padding: 0 30px;
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.content > li:nth-child(5) ol.access,
+.content > li:nth-child(10) ol.access,
+.content > li:nth-child(15) ol.access {
+    background: none;
+    left: 0;
+    width: auto;
+}
+.content > li:nth-child(6) ol.access,
+.content > li:nth-child(11) ol.access {
+    background: none;
+    left: 0;
+    width: auto;
+}
+
+ol.access li {
+    margin: 10px 0;
+}
+
+.info {
+    text-shadow: none;
+}
+
+.flag {
+    display: none;
+}
+
+.swiper-pagination {
+    font-size: 2.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.swiperbutton {
+    display: unset;
+}
+
+:root {
+    --swiper-theme-color: #01A0C7;
+}
+
+
+.chain {
+    min-height: 100px;
+}
+
+.chain p:last-child {
+    font-size: 2rem;
+}
