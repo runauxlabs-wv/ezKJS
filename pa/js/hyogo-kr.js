@@ -101,5 +101,7 @@ $.ajax({
         });
                 
         $('.kankouspot').empty();
+        $('.kankouspot').append(spot);
+        $('.kankoudetail').append(elem);
     }
 });

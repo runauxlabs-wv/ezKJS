@@ -6,8 +6,8 @@ window.onload = () => {
     
 
     //정보 불러오기
-    $('.kankouspot').append(spot);
-    $('.kankoudetail').append(elem);
+    // $('.kankouspot').append(spot);
+    // $('.kankoudetail').append(elem);
 
     //리모콘 스크롤
     $('header nav p, .menu a').each(function() {
