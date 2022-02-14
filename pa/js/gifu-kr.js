@@ -52,7 +52,7 @@ function addMakers(map) {
         const markerOptions = {
             map: map,
             position: locations[location],
-            icon: '/ez210927/kjs/pa/img/svg/markerG.png',
+            icon: '/portfolio/pa/img/svg/markerG.png',
             // icon: '../img/svg/markerG.png',
             label: {
                 text: location,
@@ -70,7 +70,7 @@ var spot = '';
 var elem = '';
 $.ajax({
     type: 'GET',
-    url: '/ez210927/kjs/pa/json/gifu.json',
+    url: '/portfolio/pa/json/gifu.json',
     // url: '../json/gifu.json',
     dataType: 'json',
     success: function(data) {

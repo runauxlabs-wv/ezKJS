@@ -48,7 +48,7 @@ function addMakers(map) {
         const markerOptions = {
             map: map,
             position: locations[location],
-            icon: '/ez210927/kjs/pa/img/svg/markerH.png',
+            icon: '/portfolio/pa/img/svg/markerH.png',
             // icon: '../img/svg/markerH.png',
             label: {
                 text: location,
@@ -66,7 +66,7 @@ var spot = '';
 var elem = '';
 $.ajax({
     type: 'GET',
-    url: '/ez210927/kjs/pa/json/hyogo.json',
+    url: '/portfolio/pa/json/hyogo.json',
     // url: '../json/hyogo.json',
     dataType: 'json',
     success: function(data) {
