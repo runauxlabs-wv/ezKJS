@@ -70,7 +70,7 @@ $.ajax({
     // url: '../json/hyogo.json',
     dataType: 'json',
     success: function(data) {
-        // console.log(data);
+        $('.kankouspot').empty();
 
         $.each(data, function(i, obj) {
             elem += `<div class="overlay" id="${obj.id}">`;
@@ -101,7 +101,5 @@ $.ajax({
             spot += `<p>${obj.name}<span>${obj.jname}</span></p>`;
             spot += `</div>`;
         });
-        
-        $('#loadingbox').hide();
     }
 });
