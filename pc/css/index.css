@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Sharp|Material+Icons+Two+Tone|Material+Icons+Outlined');
 
 
@@ -11,6 +11,32 @@
     font-weight: normal;
     font-family: 'Noto Sans KR', sans-serif;
     /* outline: 1px solid aqua; */
+}
+
+body {
+    background: #f7f9fd;
+}
+
+body::before, body::after {
+    z-index: -1;
+    content: "";
+    display: block;
+    width: 800px;
+    height: 900px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body::before {
+    background: linear-gradient(-45deg, #eef6ff 5%, white 80%);
+    box-shadow: inset 5px 5px 3px #b2bfd1;
+}
+
+body::after {
+    box-shadow: inset -6px -6px 3px white;
 }
 
 li {
@@ -35,9 +61,10 @@ strong {
 }
 
 select, input {
-    border: 1px solid #aaaaaa;
+    border: 1px solid #aaa;
     border-radius: 0;
     padding: 10px;
+    background-color: #fff;
 }
 
 .clearfix::after {
@@ -45,7 +72,6 @@ select, input {
     display: block;
     clear: both;
 }
-
 
 /* 헤더-------------------------------------------------------------------------------------- */
 header select {
@@ -57,9 +83,7 @@ header select {
 }
 
 header .inner {
-    background: url(../img/bg.png) no-repeat center / cover;
-    /* background-color: #eee; */
-    background-blend-mode: lighten;
+    background: linear-gradient(135deg, #d9e2ee, #f7f9fd, #d9e2ee);
     max-width: 100vw;
     height: 100vh;
     position: fixed;
@@ -89,7 +113,7 @@ header .inner > div {
 
 .menubtn p {
     width: 40px;
-    height: 3px;
+    height: 1px;
     background: #301d3f;
 }
 
@@ -100,7 +124,7 @@ header .inner > div {
 .menubtn::before {
     content: "";
     width: 40px;
-    height: 3px;
+    height: 1px;
     background-color: #301d3f;
     position: absolute;
     top: 13px;
@@ -112,10 +136,10 @@ header .inner > div {
 .menubtn::after {
     content: "";
     width: 40px;
-    height: 3px;
+    height: 1px;
     background-color: #301d3f;
     position: absolute;
-    top: 34px;
+    bottom: 13px;
     left: 50%;
     transform: translate(-50%, 0);
     transition: 0.3s;
@@ -128,7 +152,7 @@ header .inner > div {
 }
 
 .menubtn.active::after {
-    top: 25px;
+    bottom: 25px;
     left: 5px;
     transform: rotate(-45deg);
 }
@@ -136,7 +160,6 @@ header .inner > div {
 .title {
     width: 200px;
     height: 200px;
-    background: linear-gradient(155deg, #f3f3f3 30%, white 80%);
     position: relative;
     margin: 50px 50px 0;
     float: left;
@@ -145,8 +168,14 @@ header .inner > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #eef6ff 50%, white 80%);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #b2bfd1;
+}
+
+.title:hover {
+    background: linear-gradient(-45deg, #eef6ff 5%, white 80%);
+    box-shadow: inset 2px 2px 5px #b2bfd1;
 }
 
 .title::before {
@@ -155,24 +184,21 @@ header .inner > div {
     position: absolute;
     top: 0;
     left: 0;
-    width: 200px;
-    height: 200px;
-    box-shadow: -6px -6px 10px white;
-    border-radius: 20px;
-}
-
-.title:hover {
-    background: linear-gradient(-25deg, #f3f3f3 30%, white 80%);
-    box-shadow: inset 4px 4px 10px rgba(0,0,0,0.2);
+    width: 100%;
+    height: 100%;
+    box-shadow: -4px -4px 5px white;
+    border-radius: inherit;
 }
 
 .title:hover::before {
-    box-shadow: inset -6px -6px 10px white;
+    box-shadow: inset -6px -6px 5px white;
 }
 
-
 .title p {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-family: 'Do Hyeon', sans-serif;
+    font-weight: bold;
+    color: #3E8AD6;
 }
 
 /* 단위변환-------------------------------------------------------------------------------------- */
@@ -182,10 +208,12 @@ header .inner > div {
 }
 
 .calculator > div > h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 40px;
+    font-family: 'Do Hyeon', sans-serif;
+    color: #3E8AD6;
 }
 
 .calculator > div.on {
@@ -272,7 +300,6 @@ header .inner > div {
     float: right;
     text-align: left;
 }
-
 
 /* 퇴직금-------------------------------------------------------------------------------------- */
 
@@ -438,6 +465,7 @@ h2 {
     text-align: center;
     width: 50%;
     line-height: 51px;
+    background-color: #fff;
 }
 
 .workperson select {
@@ -567,6 +595,7 @@ h3 {
 
 .dDayinput p:nth-child(3) span {
     border: 1px solid #aaa;
+    background-color: #fff;
     display: inline-block;
     padding-left: 10px;
 }
@@ -689,7 +718,7 @@ h3 {
 }
 
 .workpay > div p:first-child {
-    border: 1px solid #aaaaaa;
+    border: 1px solid #aaa;
 }
 
 

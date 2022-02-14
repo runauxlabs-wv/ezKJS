@@ -117,7 +117,7 @@ window.onload = () => {
     $(function() {
         $('#datepicker1, #datepicker2, #datepicker3').datepicker({
             showOn: "button",
-            // buttonImage: "/portfolio/pc/img/cal.png",
+            // buttonImage: "/ez210927/kjs/pc/img/cal.png",
             buttonImage: "./img/cal.png",
             buttonImageOnly: true,
             buttonText: "달력",
