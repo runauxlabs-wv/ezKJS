@@ -48,7 +48,7 @@ function addMakers(map) {
         const markerOptions = {
             map: map,
             position: locations[location],
-            icon: '/portfolio/pa/img/svg/markerH.png',
+            icon: '/ez210927/kjs/pa/img/svg/markerH.png',
             // icon: '../img/svg/markerH.png',
             label: {
                 text: location,
@@ -66,7 +66,7 @@ var spot = '';
 var elem = '';
 $.ajax({
     type: 'GET',
-    url: '/portfolio/pa/json/hyogo.json',
+    url: '/ez210927/kjs/pa/json/hyogo.json',
     // url: '../json/hyogo.json',
     dataType: 'json',
     success: function(data) {
@@ -80,7 +80,7 @@ $.ajax({
             elem += `<table>`;
             elem += `<tr>`;
             elem += `<th>주소</th>`;
-            elem += `<td>${obj.address}<span>(${obj.jaddress})</span></td>`;
+            elem += `<td>${obj.address}<br><span>${obj.jaddress}</span></td>`;
             elem += `</tr>`;
             elem += `<th>영업시간</th>`;
             elem += `<td>${obj.time}</td>`;

@@ -52,7 +52,7 @@ function addMakers(map) {
         const markerOptions = {
             map: map,
             position: locations[location],
-            icon: '/portfolio/pa/img/svg/markerG.png',
+            icon: '/ez210927/kjs/pa/img/svg/markerG.png',
             // icon: '../img/svg/markerG.png',
             label: {
                 text: location,
@@ -70,7 +70,7 @@ var spot = '';
 var elem = '';
 $.ajax({
     type: 'GET',
-    url: '/portfolio/pa/json/gifu.json',
+    url: '/ez210927/kjs/pa/json/gifu.json',
     // url: '../json/gifu.json',
     dataType: 'json',
     success: function(data) {
@@ -84,7 +84,7 @@ $.ajax({
             elem += `<table>`;
             elem += `<tr>`;
             elem += `<th>주소</th>`;
-            elem += `<td>${obj.address}<span>(${obj.jaddress})</span></td>`;
+            elem += `<td>${obj.address}<br><span>${obj.jaddress}</span></td>`;
             elem += `</tr>`;
             elem += `<th>영업시간</th>`;
             elem += `<td>${obj.time}</td>`;
