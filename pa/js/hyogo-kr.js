@@ -69,9 +69,7 @@ $.ajax({
     url: '/portfolio/pa/json/hyogo.json',
     // url: '../json/hyogo.json',
     dataType: 'json',
-    success: function(data) {
-        $('.kankouspot').empty();
-
+    success: function(data) {        
         $.each(data, function(i, obj) {
             elem += `<div class="overlay" id="${obj.id}">`;
             elem += `<p class="img${i+1}"><b>이미지를 클릭하면 팝업이 닫힙니다</b></p>`;
@@ -94,12 +92,14 @@ $.ajax({
             elem += `</table>`;
             elem += `</div>`;
         });
-
-        $.each(data, function(i, obj) {
-            spot += `<div class="${obj.class}" data-id="${obj.id}">`;
-            spot += `<p class="img${i+1}"></p>`;
-            spot += `<p>${obj.name}<span>${obj.jname}</span></p>`;
-            spot += `</div>`;
-        });
+        
+        // $.each(data, function(i, obj) {
+        //     spot += `<div class="${obj.class}" data-id="${obj.id}">`;
+        //     spot += `<p class="img${i+1}"></p>`;
+        //     spot += `<p>${obj.name}<span>${obj.jname}</span></p>`;
+        //     spot += `</div>`;
+        // });
+        
+        $('.kankouspot').empty();
     }
 });
