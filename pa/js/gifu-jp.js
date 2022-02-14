@@ -74,7 +74,12 @@ $.ajax({
     // url: '../json/gifu.json',
     dataType: 'json',
     success: function(data) {
-        // console.log(data);
+        $.each(data, function(i, obj) {
+            spot += `<div class="${obj.class}" data-id="${obj.id}">`;
+            spot += `<p class="img${i+1}"></p>`;
+            spot += `<p>${obj.jname}</p>`;
+            spot += `</div>`;
+        });
 
         $.each(data, function(i, obj) {
             elem += `<div class="overlay" id="${obj.id}">`;
@@ -99,12 +104,6 @@ $.ajax({
             elem += `</div>`;
         });
 
-        $.each(data, function(i, obj) {
-            spot += `<div class="${obj.class}" data-id="${obj.id}">`;
-            spot += `<p class="img${i+1}"></p>`;
-            spot += `<p>${obj.jname}</p>`;
-            spot += `</div>`;
-        });
-        $('#loadingbox').hide();
+        $('.kankouspot').empty();
     }
 });

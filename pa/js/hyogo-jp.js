@@ -71,6 +71,13 @@ $.ajax({
     dataType: 'json',
     success: function(data) {
         $.each(data, function(i, obj) {
+            spot += `<div class="${obj.class}" data-id="${obj.id}">`;
+            spot += `<p class="img${i+1}"></p>`;
+            spot += `<p>${obj.jname}</p>`;
+            spot += `</div>`;
+        });
+
+        $.each(data, function(i, obj) {
             elem += `<div class="overlay" id="${obj.id}">`;
             elem += `<p class="img${i+1}"><b>イメージをクリックするとこの画面が消えます</b></p>`;
             elem += `<h6>${obj.jname}</h6>`;
@@ -92,13 +99,6 @@ $.ajax({
             elem += `</table>`;
             elem += `</div>`;
         });
-
-        // $.each(data, function(i, obj) {
-        //     spot += `<div class="${obj.class}" data-id="${obj.id}">`;
-        //     spot += `<p class="img${i+1}"></p>`;
-        //     spot += `<p>${obj.jname}</p>`;
-        //     spot += `</div>`;
-        // });
 
         $('.kankouspot').empty();
     }
