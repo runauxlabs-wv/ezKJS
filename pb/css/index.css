@@ -232,6 +232,9 @@ h1 span {
 .Swiper1 .swiper-slide > div a > p:last-child {
     font-size: 1.4rem;
     color: #535353;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 /* 섹션2----------------------------------------------------------------- */
@@ -282,7 +285,7 @@ h2 {
 
 .news1 { background: url(../img/cardnews.png) no-repeat left / cover; }
 .news2 .img { background: url(../img/meeting.jpg) no-repeat left / cover; }
-.news3 .img { background: url(../img/semina.jpg) no-repeat center / cover; }
+.news3 .img { background: url(../img/semina.png) no-repeat center / cover; }
 
 .cardnews {
     width: 240px;
@@ -428,6 +431,7 @@ h2 {
     width: 560px;
     height: 155px;
     background: url(../img/newsletter01.jpg) no-repeat left / cover;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 .box5 div {
