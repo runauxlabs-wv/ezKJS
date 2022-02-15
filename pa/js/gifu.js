@@ -3,11 +3,6 @@ window.onload = () => {
     //지도호출
     initMap();
     addMakers(map);
-    
-
-    //정보 불러오기
-    // $('.kankouspot').append(spot);
-    // $('.kankoudetail').append(elem);
 
     //리모콘 스크롤
     $('header nav p, .menu a').each(function() {

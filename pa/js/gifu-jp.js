@@ -66,21 +66,21 @@ function addMakers(map) {
 };
 
 //상세정보 호출
-var spot = '';
-var elem = '';
 $.ajax({
     type: 'GET',
     url: '/portfolio/pa/json/gifu.json',
     // url: '../json/gifu.json',
     dataType: 'json',
     success: function(data) {
+        var spot = '';
         $.each(data, function(i, obj) {
             spot += `<div class="${obj.class}" data-id="${obj.id}">`;
             spot += `<p class="img${i+1}"></p>`;
             spot += `<p>${obj.jname}</p>`;
             spot += `</div>`;
         });
-
+        
+        var elem = '';
         $.each(data, function(i, obj) {
             elem += `<div class="overlay" id="${obj.id}">`;
             elem += `<p class="img${i+1}"><b>イメージをクリックするとこの画面が消えます</b></p>`;
