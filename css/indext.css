@@ -47,6 +47,10 @@ div.span p {
     width: 70vw;
 }
 
+.textbox h4 {
+    text-align: center;
+}
+
 /* contact-------------------------------------------------------------------- */
 
 form {
