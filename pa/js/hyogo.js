@@ -55,21 +55,21 @@ window.onload = () => {
     };
 
     //스팟클릭이벤트
-    $('.kankouspot > div').click(function () {
+    $(document).on('click', '.kankouspot > div', function () {
         $('.kankoudetail').addClass('on');
         $('#' + $(this).attr('data-id')).addClass('on').siblings().removeClass('on')
     });
 
-    $('.overlay > p:first-child').click(function () {
+    $(document).on('click', '.overlay > p:first-child', function () {
         $('.kankoudetail').removeClass('on');
     });
 
-    $('.info').click(function () {
+    $(document).on('click', '.info', function () {
         $('.kankoudetail').addClass('on');
         $('#' + $(this).attr('data-id')).addClass('on').siblings().removeClass('on')
     });
 
-    $('.kankoudetail').click(function(e) {
+    $(document).on('click', '.kankoudetail', function(e) {
         if($(this).has(e.target).length === 0 ) {
             $('.kankoudetail').removeClass('on');
         }
