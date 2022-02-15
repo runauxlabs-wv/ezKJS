@@ -115,35 +115,30 @@ header .inner > div {
 .menubtn p {
     width: 40px;
     height: 1px;
-    background: #301d3f;
+    background: #555d6b;
 }
 
 .menubtn.active p {
     background: transparent;
 }
 
-.menubtn::before {
+.menubtn::before, .menubtn::after {
     content: "";
     width: 40px;
     height: 1px;
-    background-color: #301d3f;
+    background-color: #555d6b;
     position: absolute;
-    top: 13px;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translateX(-50%);
     transition: 0.3s;
 }
 
+.menubtn::before {
+    top: 13px;
+}
+
 .menubtn::after {
-    content: "";
-    width: 40px;
-    height: 1px;
-    background-color: #301d3f;
-    position: absolute;
     bottom: 13px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    transition: 0.3s;
 }
 
 .menubtn.active::before {
