@@ -1,4 +1,4 @@
-window.onload = () => {
+window.onload = function() {
 
     //계산기 선택
     $('.title').click(function() {
@@ -15,7 +15,8 @@ window.onload = () => {
         $('.changer :input').val('1');
         $('.selector li:first').addClass('on').siblings().removeClass('on');
         $('.length').addClass('on').siblings().removeClass('on');
-        $('.spec, #retiremoney, #average, #holidaymoney, .insurResult').empty();
+        $('.spec, #retiremoney, #average, #holidaymoney').empty();
+        $('.insurResult span').html('0');
         list = list0;
         lengthVal = 1;
         input = 1;
@@ -40,7 +41,7 @@ window.onload = () => {
     };
     var inputNumber = document.querySelectorAll('#pay, #pluspay, #vacapay, .calList input, #insurpay, #after, #dDay, #dateinput, #hourpay');
 
-    Array.from(inputNumber).forEach((eachInput) => {
+    Array.prototype.forEach.call(inputNumber, function(eachInput) {
         eachInput.addEventListener('keyup', inNumber);
     });
 
@@ -50,7 +51,7 @@ window.onload = () => {
     };
     var dates = document.querySelectorAll('#datepicker1, #datepicker2, #datepicker3, #dateinput');
 
-    Array.from(dates).forEach((eachdate) => {
+    Array.prototype.forEach.call(dates, function(eachdate) {
         eachdate.addEventListener('keyup', Hyphen);
     });
 
@@ -93,14 +94,14 @@ window.onload = () => {
         $('.calList .spec').empty();
 
         var elem = "";
-        for(var i of list) {
+        $.each(list, function(idx, i) {
             var result = cm / i.value;
             if(parseFloat(result.toFixed(1)).toString().length > 9) {
-                elem += `<p><span>${parseFloat(result.toFixed(6)).toExponential(2)}</span> <span>${i.name}</span></p>`
+                elem += '<p><span>' + parseFloat(result.toFixed(6)).toExponential(2) + '</span> <span>' + i.name + '</span></p>';
             } else {
-                elem += `<p><span>${parseFloat(result.toFixed(6))}</span> <span>${i.name}</span></p>`
+                elem += '<p><span>' + parseFloat(result.toFixed(6)) + '</span> <span>' + i.name + '</span></p>';
             }
-        };
+        });
         
         $('.spec').append(elem);
     };
@@ -238,41 +239,16 @@ window.onload = () => {
         var hireP = Math.floor((pay*0.008)/10)*10;
         var hireC = Math.floor(pay*(0.008 + Number(perNum))/10)*10;
 
-        $('.insurResult').empty();
-
-        var elem = `<tr>
-        <th colspan="2">근로자</th>
-        <th>사업자</th>
-        <th>합계</th>
-        </tr>
-        <tr>
-        <th>국민연금</th>
-        <td><span>${numberWithCommas(pension)}</span>원</td>
-        <td><span>${numberWithCommas(pension)}</span>원</td>
-        <td>${numberWithCommas(pension*2)}원</td>
-        </tr>
-        <tr>
-        <th>건강보험</th>
-        <td><span>${numberWithCommas(health)}</span>원</td>
-        <td><span>${numberWithCommas(health)}</span>원</td>
-        <td>${numberWithCommas(health*2)}원</td>
-        </tr>
-        <tr>
-        <th>장기요양보험</th>
-        <td><span>${numberWithCommas(care)}</span>원</td>
-        <td><span>${numberWithCommas(care)}</span>원</td>
-        <td>${numberWithCommas(care*2)}원</td>
-        </tr>
-        <tr>
-        <th>고용보험</th>
-        <td><span>${numberWithCommas(hireP)}</span>원</td>
-        <td><span>${numberWithCommas(hireC)}</span>원</td>
-        <td>${numberWithCommas(hireP + hireC)}원</td>
-        </tr>
-        <tr>
-        <td colspan="4">총 ${numberWithCommas((pension + health + care)*2 + hireP + hireC)}원
-        </tr>`;
-        $('.insurResult').append(elem);
+        $('.insurResult tr:eq(1) span').html(numberWithCommas(pension));
+        $('.insurResult tr:eq(1) td:last-child span').html(numberWithCommas(pension*2)+'원');
+        $('.insurResult tr:eq(2) span').html(numberWithCommas(health));
+        $('.insurResult tr:eq(2) td:last-child span').html(numberWithCommas(health*2)+'원');
+        $('.insurResult tr:eq(3) span').html(numberWithCommas(care));
+        $('.insurResult tr:eq(3) td:last-child span').html(numberWithCommas(care*2)+'원');
+        $('.insurResult tr:eq(4) td:nth-child(2) span').html(numberWithCommas(hireP));
+        $('.insurResult tr:eq(4) td:nth-child(3) span').html(numberWithCommas(hireC));
+        $('.insurResult tr:eq(4) td:last-child span').html(numberWithCommas(hireP + hireC)+'원');
+        $('.insurResult tr:eq(5) td').html('총 ' + numberWithCommas((pension + health + care)*2 + hireP + hireC) + '원');
     };
 
 
@@ -304,11 +280,11 @@ window.onload = () => {
         var dbetween = (now.getTime() - pickdate_date.getTime())/1000/60/60/24;
 
         if(dbetween < 0) {
-            howday.innerHTML = `기준일은 <span>${dayOfweek}</span>이며, 오늘로부터 <span>${Math.abs(dbetween)}</span>일 남았습니다.`
+            howday.innerHTML = '기준일은 <span>' + dayOfweek + '</span>이며, 오늘로부터 <span>' + Math.abs(dbetween) + '</span>일 남았습니다.';
         } else if (dbetween > 0) {
-            howday.innerHTML = `기준일은 <span>${dayOfweek}</span>이며, 오늘로부터 <span>${Math.floor(dbetween)}</span>일 전입니다.`
+            howday.innerHTML = '기준일은 <span>' + dayOfweek + '</span>이며, 오늘로부터 <span>' + Math.floor(dbetween) + '</span>일 전입니다.';
         } else {
-            howday.innerHTML = `기준일은 <span>${dayOfweek}</span>이며, 오늘입니다.`
+            howday.innerHTML = '기준일은 <span>' + dayOfweek + '</span>이며, 오늘입니다.';
         };
     };
     
@@ -329,10 +305,10 @@ window.onload = () => {
         if(!pickdate) {
             alert('기준일을 입력해주세요.');
         } else {
-            afterresult.value = `${year}년 ${month+1}월 ${date}일`;
+            afterresult.value = year + '년' + month+1 + '월' + date + '일';
         }
     };
-    let btn1 = document.querySelector('#btn1')
+    var btn1 = document.querySelector('#btn1')
     btn1.addEventListener('click', afterdate);
     
     //전날
@@ -351,11 +327,11 @@ window.onload = () => {
         if(!pickdate) {
             alert('기준일을 입력해주세요.');
         } else {
-            dDayresult.value = `${year}년 ${month+1}월 ${date}일`;
+            dDayresult.value = year + '년' + month+1 + '월' + date + '일';
         }
     };
     
-    let btn2 = document.querySelector('#btn2')
+    var btn2 = document.querySelector('#btn2')
     btn2.addEventListener('click', dDaydate);
 
     //그날까지는
@@ -379,12 +355,12 @@ window.onload = () => {
             if(!regex.test(dateinput)) {
                 alert('입력한 날짜가 잘못되었습니다. 0100년 1월 1일 부터 입력할 수 있습니다.');
             } else {
-                dateinputresult.value = `${Math.floor(result)} 일`;
+                dateinputresult.value = Math.floor(result) + '일';
             }
         }
     };
 
-    let btn3 = document.querySelector('#btn3')
+    var btn3 = document.querySelector('#btn3')
     btn3.addEventListener('click', dateinputdate);
 
 
@@ -407,12 +383,12 @@ window.onload = () => {
 
     //옵션추가
     for(var i = 15; i <= 40; i++) {
-        frm.hour.add(new Option(`${i}시간`, i));
+        frm.hour.add(new Option(i + '시간', i));
     };
 
     for(var i = 0; i <= 5; i++) {
         var j = 10 * i;
-        frm.minute.add(new Option(`${j}분`, j));
+        frm.minute.add(new Option(j + '분', j));
     };
 
     //40시간일때 분 숨기기
