@@ -10,6 +10,7 @@
     font-size: 10px;
     font-weight: normal;
     font-family: 'Noto Sans KR', sans-serif;
+    color: #555d6b;
     /* outline: 1px solid aqua; */
 }
 
@@ -241,8 +242,8 @@ header .inner > div {
 }
 
 .selector li.on {
-    color: black;
-    text-decoration: underline;
+    color: #555d6b;
+    font-weight: bold;
 }
 
 .calList > div {
