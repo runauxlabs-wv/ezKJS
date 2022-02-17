@@ -773,6 +773,10 @@ header {
     overflow: hidden;
 }
 
+.is-ie .notice li a {
+    display: block;
+}
+
 .smallbanner {
     width: 800px;
     display: flex;
@@ -860,6 +864,10 @@ header {
 .block3 > div {
     display: flex;
     justify-content: space-around;
+}
+
+.is-ie .block3 > div > a {
+    display: block;
 }
 
 /* footer ------------------------------------------------------------------------------*/
