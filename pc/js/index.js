@@ -305,7 +305,7 @@ window.onload = function() {
         if(!pickdate) {
             alert('기준일을 입력해주세요.');
         } else {
-            afterresult.value = year + '년' + month+1 + '월' + date + '일';
+            afterresult.value = year + '년' + (month+1) + '월' + date + '일';
         }
     };
     var btn1 = document.querySelector('#btn1')
@@ -327,7 +327,7 @@ window.onload = function() {
         if(!pickdate) {
             alert('기준일을 입력해주세요.');
         } else {
-            dDayresult.value = year + '년' + month+1 + '월' + date + '일';
+            dDayresult.value = year + '년' + (month+1) + '월' + date + '일';
         }
     };
     
