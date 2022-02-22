@@ -10,7 +10,7 @@
     font-size: 10px;
     font-weight: normal;
     font-family: 'Noto Sans KR', sans-serif;
-    color: #555d6b;
+    color: #373c4d;
     /* outline: 1px solid aqua; */
 }
 
@@ -373,7 +373,7 @@ header .inner > div {
 
 .retire > div:nth-child(3) {
     padding: 20px;
-    background: #c4c4c4;
+    background: #cfe6ff;
     text-align: right;
 }
 
@@ -383,7 +383,7 @@ h2 {
 }
 
 .retire .average {
-    border: 1px solid #c4c4c4;
+    border: 1px solid #cfe6ff;
     padding: 20px;
     margin-top: 0;
 }
@@ -407,6 +407,22 @@ h2 {
     height: 200px;
 }
 
+.ui-widget-header {
+    background: #cfe6ff;
+}
+
+.ui-widget-content .ui-state-default {
+    background: #eef6ff;
+    border: 1px solid #cfe6ff;
+    color: #3E8AD6;
+}
+
+.ui-widget-content .ui-state-highlight {
+    background: #cfe6ff;
+    color: #227cd6;
+    font-weight: bold;
+}
+
 .ui-datepicker-calendar td a, .ui-datepicker-calendar thead span,
 .ui-datepicker .ui-datepicker-title select, .ui-datepicker .ui-datepicker-title option,
 .ui-datepicker-other-month {
@@ -420,6 +436,10 @@ h2 {
 
 .ui-datepicker-prev, .ui-datepicker-next {
     display: none;
+}
+
+.ui-datepicker td span {
+    text-align: center;
 }
 
 .retire li {
@@ -452,8 +472,8 @@ h2 {
 
 .workperson {
     margin-top: 20px;
-    border-top: 1px solid #c4c4c4;
-    border-bottom: 1px solid #c4c4c4;
+    border-top: 1px solid #cfe6ff;
+    border-bottom: 1px solid #cfe6ff;
 }
 
 .workperson p {
@@ -481,7 +501,7 @@ h2 {
 }
 
 .insurResult tr {
-    border-bottom: 1px solid #c4c4c4;
+    border-bottom: 1px solid #cfe6ff;
 }
 
 .insurResult tr:first-child {
@@ -530,7 +550,7 @@ h2 {
 
 .dDay > div:nth-child(2) {
     text-align: center;
-    border-bottom: 1px solid #c4c4c4;
+    border-bottom: 1px solid #cfe6ff;
     padding-bottom: 20px;
 }
 
@@ -620,7 +640,7 @@ h3 {
     display: inline-block;
     font-size: 1.4rem;
     padding: 3px 6px;
-    background: #301d3f;
+    background: #3E8AD6;
     color: white;
     cursor: pointer;
 }
@@ -651,7 +671,7 @@ h3 {
 }
 
 .holiday > p {
-    background: #f0f0f0;
+    background: #f5f5f5;
     padding: 10px 5px;
 }
 
@@ -664,7 +684,7 @@ h3 {
 
 #holresult {
     text-align: center;
-    background: #301d3f;
+    background: #3E8AD6;
     color: white;
     cursor: pointer;
     margin: 10px 0;
@@ -742,7 +762,7 @@ h3 {
 
 .holiday > div:nth-child(5) {
     padding: 20px;
-    background: #c4c4c4;
+    background: #cfe6ff;
     text-align: right;
 }
 
@@ -782,7 +802,7 @@ h4 {
     text-align: center;
     position: relative;
     padding-bottom: 20px;
-    border-bottom: 1px solid #c4c4c4;
+    border-bottom: 1px solid #cfe6ff;
 }
 
 .whatholiday .material-icons-outlined {
