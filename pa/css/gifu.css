@@ -29,13 +29,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #57EB68, #00693F);
+    background: rgba(0,105,63,0.5);
     border-radius: 10px;
     box-shadow: inset -4px -4px 10px rgba(255,255,255,0.9);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    box-shadow: none;
+    background: rgba(0,105,63,0.8);
 }
 
 ::-webkit-scrollbar-button {
