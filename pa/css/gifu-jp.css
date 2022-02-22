@@ -19,6 +19,28 @@ body {
     max-width: 1920px;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #57EB68, #00693F);
+    border-radius: 10px;
+    box-shadow: inset -4px -4px 10px rgba(255,255,255,0.9);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: none;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
 img,
 iframe {
     display: block;
