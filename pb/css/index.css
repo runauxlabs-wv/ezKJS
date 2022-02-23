@@ -529,7 +529,6 @@ h3 {
 .is-ie.ie10 .contents .swiper-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     overflow-y: auto;
     scrollbar-arrow-color: white;
     scrollbar-track-color: white;
