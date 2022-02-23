@@ -526,6 +526,16 @@ h3 {
     flex-direction: column;
 }
 
+.is-ie.ie10 .contents .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-arrow-color: white;
+    scrollbar-track-color: white;
+    scrollbar-shadow-color: white;
+    scrollbar-face-color: #005BAB;
+}
+
 .contents img {
     width: 210px;
     height: 288px;
