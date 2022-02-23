@@ -1,5 +1,4 @@
 window.onload = () => {
-    
     //지도호출
     initMap();
     addMakers(map);
@@ -75,6 +74,12 @@ window.onload = () => {
         }
     });
 
+    //코스 도시 전환 스위치
+    $('.switch').click(function() {
+        $(this).addClass('on').siblings().removeClass('on');
+        $('.swiper').eq($(this).index()).addClass('on').siblings().removeClass('on');
+    });
+
     //말풍선
     $('.schedule').hover(function () {
         $(this).find('.access').toggleClass('on');
@@ -91,4 +96,7 @@ window.onload = () => {
         }
     }
     window.addEventListener('resize', changeWinRefresh);
+
+
+    
 }
