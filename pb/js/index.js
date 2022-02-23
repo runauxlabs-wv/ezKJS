@@ -33,16 +33,27 @@ window.onload = function() {
     });
 
     //책들
-    var swiper = new Swiper(".contents", {
-        direction: "vertical",
-        mousewheel: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        observer: true,
-        observeParents: true,
-    });
+
+    if($('html').hasClass('is-ie')) {
+        if($('html').hasClass('ie11')){
+            books();
+        }
+    } else {
+        books();
+    }
+
+    function books() {
+        new Swiper(".contents", {
+            direction: "vertical",
+            mousewheel: true,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            observer: true,
+            observeParents: true,
+        });
+    };
 
     //공지사항 변경버튼
     $('.selectbox > p').click(function() {
