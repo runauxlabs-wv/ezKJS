@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f9fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.paint {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.group {
+    position:relative;
+}
+
+.group .btn {
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+}
+
+.group .btn button {
+    all: unset;
+    cursor:pointer;
+    background-color: white;
+    padding: 5px 0;
+    width: 80px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+    border: 2px solid rgba(0,0,0,0.2);
+    color: rgba(0,0,0,0.8);
+    font-weight: 800;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+}
+
+.group .btn button:active {
+    transform: scale(0.98);
+}
+
+.group .btn #jsUndo {
+    left: 0;
+}
+
+.group .btn #jsRedo {
+    right: 0;
+}
+
+.controls {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls .info {
+    font-size: 12px;
+    text-align: center;
+}
+
+#jsRange{width: 400px;}
+
+.controls .controls_btns {
+    margin-bottom: 30px;
+}
+
+.controls_btns button {
+    all: unset;
+    cursor:pointer;
+    background-color: white;
+    padding: 5px 0;
+    width: 80px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+    border: 2px solid rgba(0,0,0,0.2);
+    color: rgba(0,0,0,0.8);
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.controls_btns button:active {
+    transform: scale(0.98);
+}
+
+.controls .controls_range {
+    margin-bottom: 20px;
+}
+
+.controls .controls_colors {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 490px;
+}
+
+.controls .controls_colors .controls_color {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+    border-radius: 50%;
+    cursor:pointer;
+    margin-bottom: 10px;
+}
+
+.controls .controls_colors .controls_color:active {
+    transform: scale(0.98);
+}
