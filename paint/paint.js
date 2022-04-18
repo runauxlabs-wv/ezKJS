@@ -60,12 +60,10 @@ function changelineWidth(event){
 
 function changeBrush(){
     filling = false;
-    painting = true;
 };
 
 function changeFill(){
     filling = true;
-    painting = false;
 };
 
 function canvasFilling(){
@@ -91,7 +89,6 @@ if(canvas) {
     canvas.addEventListener('mousedown', startPainting);
     canvas.addEventListener('mouseup', stopPainting);
     canvas.addEventListener("mouseenter", onMouseEnter);
-    // canvas.addEventListener('mouseleave', stopPainting);
     canvas.addEventListener('click', canvasFilling);
     canvas.addEventListener('contextmenu', eventPD);
 }
