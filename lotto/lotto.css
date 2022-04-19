@@ -103,8 +103,6 @@ button.create:hover {
     background-color: #f6f8f9;
     font-size: 0;
     opacity:0.9;
-    height: 70vh;
-    overflow-y: auto;
 }
 
 .about.on {
@@ -116,6 +114,8 @@ button.create:hover {
     width: 10%;
     font-size: 16px;
     text-align: center;
+    height: 50px;
+    padding-top: 15px;
 }
 
 .about p span {
@@ -149,6 +149,11 @@ button.create:hover {
     .history {
         width: 100vw;
         font-size: 5vw;
+    }
+
+    .about {
+        height: 60vh;
+        overflow-y: auto;
     }
 
     .about p {
