@@ -2,6 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 button.create {
     display: flex;
     width: 200px;
@@ -75,7 +81,6 @@ button.create:hover {
     top: 10px;
     left: 10px;
     z-index:5;
-    margin: 100px auto;
     padding: 10px 20px;
     border: none;
     background-color: #3a853a;
@@ -98,6 +103,8 @@ button.create:hover {
     background-color: #f6f8f9;
     font-size: 0;
     opacity:0.9;
+    height: 70vh;
+    overflow-y: auto;
 }
 
 .about.on {
@@ -113,4 +120,39 @@ button.create:hover {
 
 .about p span {
     font-weight: bold;
+}
+
+
+@media all and (max-width:800px){
+    .result {
+        width: 90vw;
+    }
+
+    .result span{
+        font-size: 6vw;
+    }
+
+    .result span:before{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index:-1;
+        width: 12vw;
+        height: 12vw;
+        border-radius: 50%;
+        background-color: cornflowerblue;
+        transform: translate(-50%, -48%);
+        content: '';
+    }
+
+    .history {
+        width: 100vw;
+        font-size: 5vw;
+    }
+
+    .about p {
+        width: 100%;
+        font-size: 24px;
+    }
 }
