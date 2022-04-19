@@ -40,7 +40,7 @@ window.onload = () => {
         for(var k in lotto) {
             atari += `<span>${lotto[k]}</span>`;
             var 횟수 = Number(횟수리스트[lotto[k] - 1].textContent);
-            횟수리스트[lotto[k] - 1].innerHTML = Number(횟수 + 1);
+            횟수리스트[lotto[k] - 1].innerHTML = 횟수 + 1;
         }
         추첨결과.innerHTML = atari;
 
