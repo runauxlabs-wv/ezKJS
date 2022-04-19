@@ -25,8 +25,12 @@ function stopPainting(event){
     event.stopPropagation();
 }
 
-function startPainting(){
-    painting = true;
+function startPainting(event){
+    if(event.which != 1) {
+        return false;
+    } else {
+        painting = true;
+    }
 }
 
 function onMouseMove(event){
@@ -114,9 +118,6 @@ if(save) {
 // document.body.addEventListener("mouseup", stopPainting);
 // document.body.addEventListener("mousedown", startPainting);
 
-
-
-
 const canvasPushArray = new Array();
 canvasPushArray.push(canvas.toDataURL());
 let canvasStep = 0;
@@ -130,7 +131,7 @@ function canvasPush() {
 };
 
 function canvasUndo() {
-    if (canvasStep > 0) {
+    if(canvasStep > 0) {
         canvasStep--;
         var canvasPic = new Image();
         canvasPic.src = canvasPushArray[canvasStep];
@@ -139,7 +140,7 @@ function canvasUndo() {
 };
 
 function canvasRedo() {
-    if (canvasStep < canvasPushArray.length-1) {
+    if(canvasStep < canvasPushArray.length-1) {
         canvasStep++;
         var canvasPic = new Image();
         canvasPic.src = canvasPushArray[canvasStep];
@@ -154,3 +155,26 @@ if(undo) {
 if(redo) {
     redo.addEventListener('click', canvasRedo);
 }
+
+var isCtrl, isY, isZ;
+
+function keyUp(event) {
+    if(event.which == 17) {isCtrl = false}
+    if(event.which == 89) {isY = false}
+    if(event.which == 90) {isZ = false}
+}
+
+function keyDown(event) {
+    if(event.which == 17) {isCtrl = true}
+    if(event.which == 89) {isY = true}
+    if(event.which == 90) {isZ = true}
+
+    if(isCtrl == true && isZ == true) {
+        canvasUndo();
+    } else if (isCtrl == true && isY == true) {
+        canvasRedo();
+    }
+}
+
+document.body.addEventListener('keyup', keyUp);
+document.body.addEventListener('keydown', keyDown);
