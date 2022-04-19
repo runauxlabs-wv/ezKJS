@@ -6,15 +6,15 @@ button.create {
     display: flex;
     width: 200px;
     height: 100px;
-    justify-content: center;
-    align-items: center;
-    background: cornflowerblue;
-    border: none;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
     margin: 100px auto;
-    cursor: pointer;
+    border: none;
+    background: cornflowerblue;
     font-family: 'Jua', sans-serif;
     font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 button.create:hover {
@@ -23,44 +23,44 @@ button.create:hover {
 
 .result {
     display: flex;
-    justify-content: space-between;
     width: 1000px;
+    margin: 0 auto;
     font-size: 50px;
     text-align: center;
-    margin: 0 auto;
+    justify-content: space-between;
 }
 
 .result span{
     display: inline-block;
-    width: 60px;
     position:relative;
+    width: 60px;
     color: white;
 }
 
 .result span:before{
-    content: '';
     display: block;
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index:-1;
     width: 100px;
     height: 100px;
+    border-radius: 50%;
     background-color: cornflowerblue;
     transform: translate(-50%, -48%);
-    z-index:-1;
-    border-radius: 50%;
+    content: '';
 }
 
 .history {
-    margin: 100px auto;
     width: 500px;
+    margin: 100px auto;
     border-collapse: collapse;
 }
 
 .history th, .history td{
-    font-size: 25px;
-    border: 1px solid black;
     padding: 5px;
+    border: 1px solid black;
+    font-size: 25px;
     text-align: center;
 }
 .history th{
@@ -71,18 +71,18 @@ button.create:hover {
 }
 
 .nankai {
-    background-color: #3a853a;
-    border: none;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-    margin: 100px auto;
-    cursor: pointer;
-    font-family: 'Jua', sans-serif;
-    font-size: 24px;
-    padding: 10px 20px;
     position: fixed;
     top: 10px;
     left: 10px;
     z-index:5;
+    margin: 100px auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #3a853a;
+    font-family: 'Jua', sans-serif;
+    font-size: 24px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 .nankai:hover {
@@ -91,12 +91,13 @@ button.create:hover {
 
 .about {
     display: none;
-    background-color: #f6f8f9;
     position: fixed;
-    font-size: 0;
     top: 30%;
     left: 0;
     z-index:4;
+    background-color: #f6f8f9;
+    font-size: 0;
+    opacity:0.9;
 }
 
 .about.on {
