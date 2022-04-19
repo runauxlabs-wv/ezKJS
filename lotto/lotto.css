@@ -1,0 +1,115 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+button.create {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background: cornflowerblue;
+    border: none;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    margin: 100px auto;
+    cursor: pointer;
+    font-family: 'Jua', sans-serif;
+    font-size: 40px;
+}
+
+button.create:hover {
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.result {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    font-size: 50px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.result span{
+    display: inline-block;
+    width: 60px;
+    position:relative;
+    color: white;
+}
+
+.result span:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+    transform: translate(-50%, -48%);
+    z-index:-1;
+    border-radius: 50%;
+}
+
+.history {
+    margin: 100px auto;
+    width: 500px;
+    border-collapse: collapse;
+}
+
+.history th, .history td{
+    font-size: 25px;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+.history th{
+    width: 30%;
+}
+.history td{
+    width: 70%;
+}
+
+.nankai {
+    background-color: #3a853a;
+    border: none;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    margin: 100px auto;
+    cursor: pointer;
+    font-family: 'Jua', sans-serif;
+    font-size: 24px;
+    padding: 10px 20px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index:5;
+}
+
+.nankai:hover {
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.about {
+    display: none;
+    background-color: #f6f8f9;
+    position: fixed;
+    font-size: 0;
+    top: 30%;
+    left: 0;
+    z-index:4;
+}
+
+.about.on {
+    display: block;
+}
+
+.about p {
+    display: inline-block;
+    width: 10%;
+    font-size: 16px;
+    text-align: center;
+}
+
+.about p span {
+    font-weight: bold;
+}
