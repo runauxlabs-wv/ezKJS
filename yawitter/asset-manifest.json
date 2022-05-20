@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio/yawitter/static/css/main.bb85ceba.css",
-    "main.js": "/portfolio/yawitter/static/js/main.bff00493.js",
+    "main.css": "/portfolio/yawitter/static/css/main.4588366e.css",
+    "main.js": "/portfolio/yawitter/static/js/main.0f98125b.js",
     "index.html": "/portfolio/yawitter/index.html",
-    "main.bb85ceba.css.map": "/portfolio/yawitter/static/css/main.bb85ceba.css.map",
-    "main.bff00493.js.map": "/portfolio/yawitter/static/js/main.bff00493.js.map"
+    "main.4588366e.css.map": "/portfolio/yawitter/static/css/main.4588366e.css.map",
+    "main.0f98125b.js.map": "/portfolio/yawitter/static/js/main.0f98125b.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb85ceba.css",
-    "static/js/main.bff00493.js"
+    "static/css/main.4588366e.css",
+    "static/js/main.0f98125b.js"
   ]
 }
